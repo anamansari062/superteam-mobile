@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    .custom-button {
+        display: flex;
+        flex-direction: row;
+        width: 140px;
+        height: 48px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 24px;
+        padding-right: 24px;
+        color: #ffffff;
+        text-align: center;
+        justify-content: center;
+        background-image: radial-gradient(ellipse at top, #ffffff33 0%, #ffffff00 70%);
+        background-size: 100% 70%;
+        background-repeat: no-repeat;
+    }
+}
