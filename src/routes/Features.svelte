@@ -14,108 +14,101 @@
 	import flutter from '$lib/images/flutter.png';
 	import react_native from '$lib/images/react-native.png';
 	import swift from '$lib/images/swift.png';
+
+	const features = [
+		{ id: 1, logo: sms_logo, title: 'SMS', subtitle: 'Solana Mobile Stack' },
+		{ id: 2, logo: pwa_logo, title: 'PWAs', subtitle: 'Progressive Web Apps' },
+		{ id: 3, logo: sdk_logo, title: 'SDKs', subtitle: 'Accelerate Development' },
+	];
+
+	const additionalFeaturesBlock1 = [
+		{ id: 4, logo: kotlin, title: 'Kotlin', subtitle: '' },
+		{ id: 5, logo: flutter, title: 'Flutter', subtitle: '' },
+		{ id: 6, logo: react_native, title: 'React Native', subtitle: '' },
+		{ id: 7, logo: swift, title: 'Swift', subtitle: '' }
+	];
+
+	const additionalFeaturesBlock2 = [
+		{ id: 4, logo: idea_logo, title: 'Idea', subtitle: '' },
+		{ id: 5, logo: earn_logo, title: 'Earn', subtitle: '' },
+		{ id: 6, logo: grant_logo, title: 'Grant', subtitle: '' },
+		{ id: 7, logo: mentor_logo, title: 'Mentor', subtitle: '' }
+	];
 </script>
 
-<section>
-	<div class="searchBar">
-		<img
-			style="width: 780px; left:50%; transform: translateX(-50%);"
-			class="absolute top-0"
-			src="/src/lib/images/ellipse.png"
-			alt="Star bg"
-		/>
+<section class="flex flex-col flex-grow lg:pt-10 items-center pb-10 relative sm:pb-24 w-full bg-blue-900">
+	<div class="relative searchBar w-72 sm:w-full">
+		<img class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full" src="/src/lib/images/ellipse.png" alt="Star bg" />
 		<div class="search flex flex-row">
 			<img src={search} alt="Welcome" />
-			<h2>App Library</h2>
+			<div class="text-md md:text-xl p-2 sm:p-3">App Library</div>
 		</div>
 	</div>
-	<div class="flex flex-row w-full h-full px-8 py-0 gap-x-12">
-		<div class="w-full h-full flex flex-col">
-			<div class="flex flex-row justify-center h-20">
-				<img class="mt-5" src={left_arrow} alt="Left Arrow" />
-				<div class="featureButton">
-					<img src={bolt} alt="Welcome" />
-					<h5>Learn</h5>
+	<div class="flex flex-col sm:flex-row w-full h-full px-4 sm:px-8 py-0 gap-x-4 sm:gap-x-12">
+		<!-- Learn Section -->
+		<div class="w-full flex flex-col">
+			<div class="flex flex-row justify-center sm:justify-between items-center h-16 sm:h-20">
+				<img class="sm:mt-5 ml-36 hidden xl:block" src={left_arrow} alt="Left Arrow" />
+				<div class="featureButton flex items-center gap-2">
+					<img src={bolt} alt="Welcome" class="w-6 h-6" />
+					<h5 class="text-white">Learn</h5>
 				</div>
-				<img class="mt-5" src={right_arrow} alt="Right Arrow" />
+				<img class="sm:mt-5 mr-36 hidden xl:block" src={right_arrow} alt="Right Arrow" />
 			</div>
-			<div class="features">
-				<div class="featureCard">
-					<img class="logo" src={sms_logo} alt="Solana Mobile Stack" />
-					<div class="gap-0.5">
-						<h3>SMS</h3>
-						<h4>Solana Mobile Stack</h4>
+			<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-12">
+				{#each features as { id, logo, title, subtitle }}
+					<div key={id} class="featureCard">
+						<img class="logo" src={logo} alt={title} />
+						<div class="gap-0.5 mt-2">
+							<div class="text-xl md:text-2xl font-semibold">{title}</div>
+							<div >{subtitle}</div>
+						</div>
 					</div>
-				</div>
-				<div class="featureCard">
-					<img class="logo" src={pwa_logo} alt="Progressive Web Apps" />
-					<div class="gap-0.5">
-						<h3>PWAs</h3>
-						<h4>Progressive Web Apps</h4>
-					</div>
-				</div>
-				<div class="featureCard">
-					<img class="logo" src={sdk_logo} alt="SDK" />
-					<div class="gap-0.5">
-						<h3>SDKs</h3>
-						<h4>Accelerate Development</h4>
-					</div>
-				</div>
-				<div class="specialBox">
-					<div class="specialCard">
-						<img style="width: 64.9px; height: 64px;" src={kotlin} alt="Kotlin" />
-					</div>
-					<div class="specialCard">
-						<img style="width: 53.48px; height: 64px;" src={flutter} alt="Flutter" />
-					</div>
-					<div class="specialCard">
-						<img style="width: 64px; height: 64px;" src={react_native} alt="React Native" />
-					</div>
-					<div class="specialCard">
-						<img style="width: 68.68px; height: 64px;" src={swift} alt="Swift" />
+				{/each}
+				<div class="w-full flex flex-col">
+					<div class="grid grid-cols-2 gap-4 sm:gap-4">
+						{#each additionalFeaturesBlock1 as { id, logo, title }}
+							<div key={id} class="featureCardLogo border p-1 rounded-lg flex-col">
+								<img class="logo ml-3 scale-75 flex items-center" src={logo} alt={title} />
+							</div>
+						{/each}
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="h-full">
-			<img class="h-full" src="/src/lib/images/line_features.png" alt="Features Divider" />
+		<!-- Line Divider -->
+		<div class="h-full hidden lg:block">
+			<img class="h-full w-full" src="/src/lib/images/line_features.png" alt="Features Divider" />
 		</div>
-		<div class="w-full h-full flex flex-col">
-			<div class="flex flex-row justify-center h-20">
-				<img class="mt-5" src={left_arrow} alt="Left Arrow" />
-				<div class="featureButton">
-					<img src={bolt} alt="Welcome" />
-					<h5>Build</h5>
-				</div>
-				<img class="mt-5" src={right_arrow} alt="Right Arrow" />
-			</div>
-			<div class="features">
-				<div class="featureCard">
-					<img class="logo" src={idea_logo} alt="Idea Logo" />
-					<div class="gap-0.5">
-						<h3>Idea Bank</h3>
-						<h4>Curated Ideas by founder</h4>
+		<div class="flex flex-col flex-grow sm:flex-row w-full h-full mt-12 md:mt-0">
+			<!-- Build Section -->
+			<div class="w-full flex flex-col flex-grow">
+				<div class="flex flex-row justify-center sm:justify-between items-center h-16 sm:h-20">
+					<img class="sm:mt-5 ml-36 hidden xl:block" src={left_arrow} alt="Left Arrow" />
+					<div class="featureButton flex items-center gap-2">
+						<img src={bolt} alt="Welcome" class="w-6 h-6" />
+						<h5 class="text-white">Build</h5>
 					</div>
+					<img class="sm:mt-5 mr-36 hidden xl:block" src={right_arrow} alt="Right Arrow" />
 				</div>
-				<div class="featureCard">
-					<img class="logo" src={earn_logo} alt="Earn Logo" />
-					<div class="gap-0.5">
-						<h3>Earn</h3>
-						<h4>Earn your first crypto</h4>
-					</div>
-				</div>
-				<div class="featureCard">
-					<img class="logo" src={grant_logo} alt="Grant Logo" />
-					<div class="gap-0.5">
-						<h3>Grants</h3>
-						<h4>Get help to build</h4>
-					</div>
-				</div>
-				<div class="featureCard">
-					<img class="logo" src={mentor_logo} alt="Mentor Logo" />
-					<div class="gap-0.5">
-						<h3>Mentor</h3>
-						<h4>Learn by experience</h4>
+				<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-12">
+					{#each features as { id, logo, title, subtitle }}
+						<div key={id} class="featureCard">
+							<img class="logo" src={logo} alt={title} />
+							<div class="gap-0.5 mt-2">
+								<div class="text-xl md:text-2xl font-semibold">{title}</div>
+								<div >{subtitle}</div>
+							</div>
+						</div>
+					{/each}
+					<div class="w-full flex flex-col">
+						<div class="grid grid-cols-2 gap-4 sm:gap-4">
+							{#each additionalFeaturesBlock2 as { id, logo, title }}
+								<div key={id} class="featureCardLogo border p-1 rounded-lg flex-col">
+									<img class="logo ml-3 scale-75 flex items-center" src={logo} alt={title} />
+								</div>
+							{/each}
+						</div>
 					</div>
 				</div>
 			</div>
@@ -123,152 +116,160 @@
 	</div>
 </section>
 
+
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		height: 913px;
-		padding-top: 6rem;
-		padding-bottom: 6rem;
-		background-color: #010a23;
-	}
+		.featureCardLogo{
+        background-image: radial-gradient(circle at top, #ffffff26 0%, #ffffff00 70%);
+        justify-content: space-between;
+        border: 1px solid;
+        border-color: #ffffff4d;
+    }
 
-	.logo {
-		width: 80px;
-		height: 80px;
-		align-self: flex-start;
-	}
+    section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /*height: 913px;*/
+        /*padding-top: 6rem;*/
+        padding-bottom: 6rem;
+        background-color: #010a23;
+    }
 
-	.features {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		width: 100%;
-		height: 100%;
-		column-gap: 2rem;
-		row-gap: 1.75rem;
-	}
+    .logo {
+        width: 80px;
+        height: 80px;
+        align-self: flex-start;
+    }
 
-	.featureCard {
-		display: flex;
-		flex-direction: column;
-		border: 1px solid;
-		border-color: #ffffff4d;
-		border-radius: 8px;
-		width: 100%;
-		height: 100%;
-		padding: 20px;
-		justify-content: space-between;
-		background-image: radial-gradient(circle at top, #ffffff26 0%, #ffffff00 70%);
-	}
+    .features {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        height: 100%;
+        column-gap: 2rem;
+        row-gap: 1.75rem;
+    }
 
-	.featureButton {
-		display: flex;
-		flex-direction: row;
-		width: fit-content;
-		height: 48px;
-		padding: 12px, 20px, 12px, 20px;
-		padding-left: 20px;
-		padding-right: 20px;
-		padding-top: 12px;
-		padding-bottom: 12px;
-		border-radius: 8px;
-		border-color: #ffffff33;
-		border: 1px;
-		gap: 8px;
-		box-shadow: 0px 1px 2px 0px;
-		color: #ffffff;
-		font-family: Inter;
-		font-size: 16px;
-		font-weight: 500;
-		line-height: 24px;
-		letter-spacing: 0em;
-		text-align: center;
-		justify-content: center;
-	}
+    .featureCard {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid;
+        border-color: #ffffff4d;
+        border-radius: 8px;
+        width: 100%;
+        /*height: 100%;*/
+        padding: 20px;
+        justify-content: space-between;
+        background-image: radial-gradient(circle at top, #ffffff26 0%, #ffffff00 70%);
+    }
 
-	.specialBox {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		column-gap: 12px;
-		row-gap: 12px;
-	}
+    .featureButton {
+        display: flex;
+				margin-bottom: 24px;
+        flex-direction: row;
+        width: fit-content;
+        height: 48px;
+        padding: 12px, 20px, 12px, 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-radius: 8px;
+        border-color: #ffffff33;
+        border: 1px;
+        gap: 8px;
+        box-shadow: 0px 1px 2px 0px;
+        color: #ffffff;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: center;
+        justify-content: center;
+    }
 
-	.specialCard {
-		display: flex;
-		justify-content: center;
-		border: 1px solid;
-		border-color: #ffffff33;
-		border-radius: 8px;
-		width: 100%;
-		height: 100%;
-		padding: 12px;
-		place-items: center;
-		background-image: radial-gradient(circle at top, #ffffff26 0%, #ffffff00 70%);
-	}
+    .specialBox {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 12px;
+        row-gap: 12px;
+    }
 
-	.search {
-		width: 100%;
-		height: 65px;
-		border-top: 1px;
-		gap: 24px;
-		border: 1px solid #ffffff4d;
-		border-radius: 8px;
-		padding: 18px;
-		box-shadow: 0px 20px 24px -4px #10182814;
-		justify-content: center;
-	}
+    .specialCard {
+        display: flex;
+        justify-content: center;
+        border: 1px solid;
+        border-color: #ffffff33;
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+        padding: 12px;
+        place-items: center;
+        background-image: radial-gradient(circle at top, #ffffff26 0%, #ffffff00 70%);
+    }
 
-	.searchBar {
-		position: relative;
-		width: 100%;
-		height: 165px;
-		padding-left: 60px;
-		padding-right: 60px;
-		padding-top: 50px;
-		padding-bottom: 50px;
-		border-top: 1px solid;
-		border-image: linear-gradient(
-				to left,
-				transparent,
-				#ffffff01,
-				#ffffff4d,
-				#ffffff01,
-				transparent
-			)
-			1;
-	}
+    .search {
+        width: 100%;
+        /*height: 65px;*/
+        gap: 24px;
+        border: 1px solid #ffffff4d;
+        border-radius: 8px;
+        /*padding: 18px;*/
+        box-shadow: 0px 20px 24px -4px #10182814;
+        justify-content: center;
+    }
 
-	h3 {
-		font-size: 32px;
-		font-weight: 600;
-		line-height: 40px;
-		letter-spacing: 0px;
-		text-align: left;
-	}
+    .searchBar {
+        /*position: relative;*/
+        /*width: 100%;*/
+        /*height: 165px;*/
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-top: 1px solid;
+        border-image: linear-gradient(
+                to left,
+                transparent,
+                #ffffff01,
+                #ffffff4d,
+                #ffffff01,
+                transparent
+        )
+        1;
+    }
 
-	h4 {
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 16px;
-		letter-spacing: 0px;
-		color: #dddddd;
-		margin-block-start: 0rem;
-	}
+    h3 {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 40px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
 
-	h5 {
-		font-size: 16px;
-		font-weight: 500;
-		line-height: 24px;
-		letter-spacing: 0em;
-		text-align: left;
-	}
+    h4 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0px;
+        color: #dddddd;
+        margin-block-start: 0rem;
+    }
 
-	h2 {
-		font-size: 24px;
-		font-weight: 400;
-		line-height: 29px;
-		letter-spacing: 0em;
-		text-align: center;
-	}
+    h5 {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
 </style>

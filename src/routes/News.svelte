@@ -1,28 +1,28 @@
 <script>
 </script>
 
-<section>
-	<div class="flex flex-col px-8 gap-8">
-		<h1>What's New</h1>
-		<div class="flex flex-row w-full h-full gap-8">
-			<div class="bigCard bg-[url('./lib/images/mobile_projects.png')]">
+<section class="sm:w-full min-h-screen sm:pt-24 pb-24 gap-16 sm:mx-auto">
+	<div class="flex flex-col gap-8 sm:mx-auto">
+		<h1 class="text-3xl sm:text-4xl text-center font-medium leading-9">What's New</h1>
+		<div class="flex flex-col md:flex-row sm:w-full gap-8 sm:mx-auto">
+			<div class="bigCard bg-[url('./lib/images/mobile_projects.png')] flex flex-col justify-end sm:w-full h-96 border border-white/20 rounded-xl bg-no-repeat sm:bg-cover bg-center bg-clip-padding">
 				<div class="bigCard">
-					<div class="cardContent">
-						<h2>Active Projects</h2>
-						<h3>Mobile Projects killing it in the ecosystem</h3>
+					<div class="cardContent p-3 rounded-b-xl bg-black/20 backdrop-blur-sm sm:backdrop-blur-md">
+						<h2 class="text-2xl font-medium leading-[38px] text-left">Active Projects</h2>
+						<h3 class="text-md font-normal leading-6 text-left text-gray-200">Mobile Projects killing it in the ecosystem</h3>
 					</div>
 				</div>
 			</div>
-			<div class="flex flex-col w-full h-full gap-8">
-				<div class="smallCard bg-[url('./lib/images/toly_img.png')]">
-					<div class="cardContent">
-						<h2>Saga</h2>
+			<div class="flex flex-col w-full h-full gap-8 mx-auto">
+				<div class="smallCard bg-[url('./lib/images/toly_img.png')] flex flex-col justify-end w-full h-52 sm:h-44 border border-white/20 rounded-xl bg-cover bg-center">
+					<div class="cardContent p-3 rounded-b-xl bg-black/20 backdrop-blur-sm sm:backdrop-blur-md">
+						<h2 class="text-2xl">Saga</h2>
 						<h3>Checkout first crypto phone ever</h3>
 					</div>
 				</div>
-				<div class="smallCard bg-[url('./lib/images/hackathon.png')]">
-					<div class="cardContent">
-						<h2>Hackathon Winners</h2>
+				<div class="smallCard bg-[url('./lib/images/hackathon.png')] flex flex-col justify-end w-full h-52 sm:h-44 border border-white/20 rounded-xl bg-cover bg-center">
+					<div class="cardContent p-3 rounded-b-xl bg-black/20 backdrop-blur-sm sm:backdrop-blur-md">
+						<h2 class="text-2xl">Hackathon Winners</h2>
 						<h3>Previous winner mobile projects</h3>
 					</div>
 				</div>
@@ -30,76 +30,3 @@
 		</div>
 	</div>
 </section>
-
-<style>
-	section {
-		width: 100%;
-		height: 660px;
-		padding-top: 6rem;
-		padding-bottom: 6rem;
-		gap: 4rem;
-	}
-
-	.bigCard {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		width: 100%;
-		height: 400px;
-		border: 1px solid #ffffff33;
-		border-radius: 16px;
-		background-size: 100% 90%;
-		background-position: center;
-		background-clip: 80%;
-	}
-
-	.smallCard {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		width: 100%;
-		height: 184px;
-		border: 1px solid #ffffff33;
-		border-radius: 16px;
-		background-size: cover;
-		background-position: center;
-	}
-
-	.cardContent {
-		padding-left: 24px;
-		padding-right: 24px;
-		padding-top: 12px;
-		padding-bottom: 12px;
-		border-bottom-right-radius: 16px;
-		border-bottom-left-radius: 16px;
-		background-color: #00000033;
-		backdrop-filter: blur(5px);
-	}
-
-	h1 {
-		font-family: Inter;
-		font-size: 30px;
-		font-weight: 500;
-		line-height: 36px;
-		letter-spacing: 0em;
-	}
-
-	h2 {
-		font-family: Inter;
-		font-size: 24px;
-		font-weight: 500;
-		line-height: 38px;
-		letter-spacing: 0em;
-		text-align: left;
-	}
-
-	h3 {
-		font-family: Inter;
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 24px;
-		letter-spacing: 0em;
-		text-align: left;
-		color: #dddddd;
-	}
-</style>
