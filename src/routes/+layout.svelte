@@ -20,6 +20,12 @@
 		/*min-height: 100vh;*/
 	}
 
+  @media screen and (min-width: 2560px) {
+      .app {
+          padding: 200px 200px;
+      }
+  }
+
 	main {
 		/*flex: 1;*/
 		display: flex;

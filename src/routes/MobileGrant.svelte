@@ -4,8 +4,8 @@
 			<h1 class="text-xl md:text-2xl font-semibold leading-9">Checkout Mobile Grants</h1>
 			<h2 class="text-md md:text-lg font-normal leading-7 text-gray-300">Solana Mobile offers a separate grants for folks building in mobile</h2>
 		</div>
-		<div class="flex flex-row justify-center items-center w-full md:w-auto h-12 px-5 py-3 rounded-xl border border-white/20 bg-gradient-to-t from-white/20 to-transparent">
-			<button class="text-white">Apply</button>
+		<div class="flex flex-row justify-center items-center">
+			<button class="text-white explore-saga-btn">Apply</button>
 		</div>
 	</div>
 </section>

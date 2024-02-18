@@ -1,0 +1,65 @@
+[
+  {
+    "title": "UX Review Presentation",
+    "description": "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    "viewLink": "#resource-1",
+    "image": "sample_resource",
+    "tags": ["REACT NATIVE", "KOTLIN"]
+  },
+  {
+    "title": "Migrating to Linear 101",
+    "description": "Description for Resource 2. How do you create compelling presentations that wow your colleagues a...",
+    "viewLink": "#resource-2",
+    "image": "sample_resource",
+    "tags": ["SMS", "SAGANIZE"]
+  },
+  {
+    "title": "Migrating to Linear 101",
+    "description": "Description for Resource 2. How do you create compelling presentations that wow your colleagues a...",
+    "viewLink": "#resource-2",
+    "image": "sample_resource",
+    "tags": ["SMS", "SAGANIZE"]
+  },
+  {
+    "title": "Migrating to Linear 101",
+    "description": "Description for Resource 2. How do you create compelling presentations that wow your colleagues a...",
+    "viewLink": "#resource-2",
+    "image": "sample_resource",
+    "tags": ["SMS", "SAGANIZE"]
+  },
+  {
+    "title": "Migrating to Linear 101",
+    "description": "Description for Resource 2. How do you create compelling presentations that wow your colleagues a...",
+    "viewLink": "#resource-2",
+    "image": "sample_resource",
+    "tags": ["SMS", "SAGANIZE"]
+  },
+  {
+    "title": "Migrating to Linear 101",
+    "description": "Description for Resource 2. How do you create compelling presentations that wow your colleagues a...",
+    "viewLink": "#resource-2",
+    "image": "sample_resource",
+    "tags": ["CANDYPAY"]
+  },
+  {
+    "title": "Migrating to Linear 101",
+    "description": "Description for Resource 2. How do you create compelling presentations that wow your colleagues a...",
+    "viewLink": "#resource-2",
+    "image": "sample_resource",
+    "tags": ["CANDYPAY", "SAGANIZE"]
+  },
+  {
+    "title": "Building your API Stack",
+    "description": "Text to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?",
+    "viewLink": "#resource-2",
+    "image": "sample_resource",
+    "tags": ["SMS", "SAGANIZE"]
+  },
+  {
+    "title": "Bill Walsh leadership lessons",
+    "description": "Description for Resource 2. How do you create compelling presentations that wow your colleagues a...",
+    "viewLink": "#resource-2",
+    "image": "sample_resource",
+    "tags": ["SMS", "SAGANIZE"]
+  }
+]

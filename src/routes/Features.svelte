@@ -15,10 +15,17 @@
 	import react_native from '$lib/images/react-native.png';
 	import swift from '$lib/images/swift.png';
 
-	const features = [
+	const features_block1 = [
 		{ id: 1, logo: sms_logo, title: 'SMS', subtitle: 'Solana Mobile Stack' },
 		{ id: 2, logo: pwa_logo, title: 'PWAs', subtitle: 'Progressive Web Apps' },
 		{ id: 3, logo: sdk_logo, title: 'SDKs', subtitle: 'Accelerate Development' },
+	];
+
+	const features_block2 = [
+		{ id: 1, logo: idea_logo, title: 'Idea Bank', subtitle: 'Curated Ideas by Founder' },
+		{ id: 2, logo: earn_logo, title: 'Earn', subtitle: 'Earn your first Crypto' },
+		{ id: 3, logo: grant_logo, title: 'Grants', subtitle: 'Get help to Build' },
+		{ id: 4, logo: mentor_logo, title: 'Mentor', subtitle: 'Learn by Experience' },
 	];
 
 	const additionalFeaturesBlock1 = [
@@ -28,12 +35,12 @@
 		{ id: 7, logo: swift, title: 'Swift', subtitle: '' }
 	];
 
-	const additionalFeaturesBlock2 = [
-		{ id: 4, logo: idea_logo, title: 'Idea', subtitle: '' },
-		{ id: 5, logo: earn_logo, title: 'Earn', subtitle: '' },
-		{ id: 6, logo: grant_logo, title: 'Grant', subtitle: '' },
-		{ id: 7, logo: mentor_logo, title: 'Mentor', subtitle: '' }
-	];
+	// const additionalFeaturesBlock2 = [
+	// 	{ id: 4, logo: idea_logo, title: 'Idea', subtitle: '' },
+	// 	{ id: 5, logo: earn_logo, title: 'Earn', subtitle: '' },
+	// 	{ id: 6, logo: grant_logo, title: 'Grant', subtitle: '' },
+	// 	{ id: 7, logo: mentor_logo, title: 'Mentor', subtitle: '' }
+	// ];
 </script>
 
 <section class="flex flex-col flex-grow lg:pt-10 items-center pb-10 relative sm:pb-24 w-full bg-blue-900">
@@ -48,20 +55,20 @@
 		<!-- Learn Section -->
 		<div class="w-full flex flex-col">
 			<div class="flex flex-row justify-center sm:justify-between items-center h-16 sm:h-20">
-				<img class="sm:mt-5 ml-36 hidden xl:block" src={left_arrow} alt="Left Arrow" />
+				<img class="sm:mt-5 ml-36 arrow_left hidden xl:block" src={left_arrow} alt="Left Arrow" />
 				<div class="featureButton flex items-center gap-2">
 					<img src={bolt} alt="Welcome" class="w-6 h-6" />
-					<h5 class="text-white">Learn</h5>
+					<a href="learn/" class="text-white z-30">Learn</a>
 				</div>
-				<img class="sm:mt-5 mr-36 hidden xl:block" src={right_arrow} alt="Right Arrow" />
+				<img class="sm:mt-5 mr-36 arrow_right hidden xl:block" src={right_arrow} alt="Right Arrow" />
 			</div>
-			<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-12">
-				{#each features as { id, logo, title, subtitle }}
+			<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-12 ">
+				{#each features_block1 as { id, logo, title, subtitle }}
 					<div key={id} class="featureCard">
 						<img class="logo" src={logo} alt={title} />
-						<div class="gap-0.5 mt-2">
+						<div class="gap-8 mt-6">
 							<div class="text-xl md:text-2xl font-semibold">{title}</div>
-							<div >{subtitle}</div>
+							<div class="text-slate-200">{subtitle}</div>
 						</div>
 					</div>
 				{/each}
@@ -69,7 +76,7 @@
 					<div class="grid grid-cols-2 gap-4 sm:gap-4">
 						{#each additionalFeaturesBlock1 as { id, logo, title }}
 							<div key={id} class="featureCardLogo border p-1 rounded-lg flex-col">
-								<img class="logo ml-3 scale-75 flex items-center" src={logo} alt={title} />
+								<img class="logo ml-3 scale-75" src={logo} alt={title} />
 							</div>
 						{/each}
 					</div>
@@ -78,38 +85,29 @@
 		</div>
 		<!-- Line Divider -->
 		<div class="h-full hidden lg:block">
-			<img class="h-full w-full" src="/src/lib/images/line_features.png" alt="Features Divider" />
+			<img class="h-full xl:h-[540px] xl:w-3 xl:mt-8 w-full" src="/src/lib/images/line_features.png" alt="Features Divider" />
 		</div>
 		<div class="flex flex-col flex-grow sm:flex-row w-full h-full mt-12 md:mt-0">
 			<!-- Build Section -->
 			<div class="w-full flex flex-col flex-grow">
 				<div class="flex flex-row justify-center sm:justify-between items-center h-16 sm:h-20">
-					<img class="sm:mt-5 ml-36 hidden xl:block" src={left_arrow} alt="Left Arrow" />
+					<img class="sm:mt-5 ml-36 arrow_left hidden xl:block" src={left_arrow} alt="Left Arrow" />
 					<div class="featureButton flex items-center gap-2">
 						<img src={bolt} alt="Welcome" class="w-6 h-6" />
-						<h5 class="text-white">Build</h5>
+						<a href="/projects" class="text-white z-30">Build</a>
 					</div>
-					<img class="sm:mt-5 mr-36 hidden xl:block" src={right_arrow} alt="Right Arrow" />
+					<img class="sm:mt-5 mr-36 hidden arrow_right xl:block" src={right_arrow} alt="Right Arrow" />
 				</div>
 				<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-12">
-					{#each features as { id, logo, title, subtitle }}
-						<div key={id} class="featureCard">
+					{#each features_block2 as { id, logo, title, subtitle }}
+						<div key={id} class="featureCard hover:bg-gradient-radial from-blue-300 to-blue-700/50 ">
 							<img class="logo" src={logo} alt={title} />
-							<div class="gap-0.5 mt-2">
+							<div class="gap-8 mt-6">
 								<div class="text-xl md:text-2xl font-semibold">{title}</div>
-								<div >{subtitle}</div>
+								<div class="text-slate-200">{subtitle}</div>
 							</div>
 						</div>
 					{/each}
-					<div class="w-full flex flex-col">
-						<div class="grid grid-cols-2 gap-4 sm:gap-4">
-							{#each additionalFeaturesBlock2 as { id, logo, title }}
-								<div key={id} class="featureCardLogo border p-1 rounded-lg flex-col">
-									<img class="logo ml-3 scale-75 flex items-center" src={logo} alt={title} />
-								</div>
-							{/each}
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -118,6 +116,18 @@
 
 
 <style>
+    @media screen and (min-width: 2560px) {
+        .arrow_left {
+					margin-left: 300px;
+        }
+    }
+
+    @media screen and (min-width: 2560px) {
+        .arrow_right {
+            margin-right: 400px;
+        }
+    }
+
 		.featureCardLogo{
         background-image: radial-gradient(circle at top, #ffffff26 0%, #ffffff00 70%);
         justify-content: space-between;
@@ -136,8 +146,8 @@
     }
 
     .logo {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         align-self: flex-start;
     }
 
@@ -162,6 +172,23 @@
         justify-content: space-between;
         background-image: radial-gradient(circle at top, #ffffff26 0%, #ffffff00 70%);
     }
+
+		.featureCard:hover{
+			background-color: #ffffff0d;
+		}
+
+		.featureCardLogo {
+				display: flex;
+				flex-direction: column;
+				border: 1px solid;
+				border-color: #ffffff4d;
+				border-radius: 8px;
+				width: 100%;
+				height: 100%;
+				padding: 20px;
+				justify-content: space-between;
+				background-image: radial-gradient(circle at top, #ffffff26 0%, #ffffff00 70%);
+		}
 
     .featureButton {
         display: flex;

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Mirror World Smart SDK",
+    "description": "A Web3 infrastructure project aiming to help developers...",
+    "tags": ["TOOLING", "SAGANIZE"],
+    "logo": "sample_logo"
+  },
+  {
+    "name": "Project Name 2",
+    "description": "Description for Project 2...",
+    "tags": ["TOOLING", "SAGANIZE"],
+    "logo": "sample_logo"
+  },
+  {
+    "name": "Mirror World Smart SDK",
+    "description": "A Web3 infrastructure project aiming to help developers...",
+    "tags": ["TOOLING", "DEFI"],
+    "logo": "sample_logo"
+  },
+    {
+        "name": "Project Name 2",
+        "description": "Description for Project 2...",
+        "tags": ["TOOLING", "CANDYPAY"],
+        "logo": "sample_logo"
+    },
+    {
+        "name": "Mirror World Smart SDK",
+        "description": "A Web3 infrastructure project aiming to help developers...",
+        "tags": ["TOOLING", "SAGANIZE"],
+        "logo": "sample_logo"
+    },
+    {
+        "name": "Project Name 2",
+        "description": "Description for Project 2...",
+        "tags": ["TOOLING", "APPLICATION"],
+        "logo": "sample_logo"
+    }
+]

@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<section class="sm:w-full min-h-screen sm:pt-24 pb-24 gap-16 sm:mx-auto">
+<section class="sm:w-full min-h-screen sm:pt-24 pb-24 gap-16 sm:mx-auto xl:px-24">
 	<div class="flex flex-col gap-8 sm:mx-auto">
 		<h1 class="text-3xl sm:text-4xl text-center font-medium leading-9">What's New</h1>
 		<div class="flex flex-col md:flex-row sm:w-full gap-8 sm:mx-auto">

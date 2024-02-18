@@ -23,7 +23,7 @@
 
 	<div class="flex-grow hidden md:flex md:items-center md:justify-center z-30">
 		<nav>
-			<ul class="flex items-center justify-center gap-4 border px-8 py-3 rounded-3xl border-slate-600">
+			<ul class="flex items-center justify-center gap-4 border px-8 py-3 rounded-3xl border-slate-600 text-white/50">
 				{#each navItems as item}
 					<li>
 						<a href={item.url} class:selected={item.url === currentPath}>
