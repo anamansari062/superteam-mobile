@@ -48,17 +48,17 @@
 			/>
 		</div>
 		<div class="flex flex-col justify-start items-start  lg:flex-row gap-4 lg:items-center">
-			<select bind:value={selectedTag} class="border border-slate-200/30 rounded-xl p-3 bg-[#010a23] text-white">
+			<select bind:value={selectedTag} class="hover:accent-[#010a23] border border-slate-200/30 rounded-xl p-3 bg-[#010a23] text-white">
 				<option value="">Select Category </option>
 				{#each getUniqueTags(data) as tag}
 					<option style="background-color: #010a23;" value={tag}>{tag.toLowerCase()}</option>
 				{/each}
 			</select>
-			<div
-				class="flex items-center gap-2 border border-white/30 rounded-xl p-3 bg-gradient-to-r from-gray-700 to-gray-900">
-				<img class="w-6 h-6" src={add} alt="Load" />
-				<button class="text-white text-sm sm:text-md">Submit your project</button>
-			</div>
+<!--			<div-->
+<!--				class="flex items-center gap-2 border border-white/30 rounded-xl p-3 bg-gradient-to-r from-gray-700 to-gray-900">-->
+<!--				<img class="w-6 h-6" src={add} alt="Load" />-->
+<!--				<button class="text-white text-sm sm:text-md">Submit your project</button>-->
+<!--			</div>-->
 		</div>
 	</div>
 	<div class="grid grid-cols-1 gap-8 px-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -76,8 +76,8 @@
 						<div class="flex flex-row gap-2 text-center">
 							{#each tags as tag}
 								<div
-									class="radial-gradient-bottom flex-grow border text-center flex items-center justify-center border-white/30 rounded-lg px-2 py-2 w-20 sm:w-24">
-									<div class="text-xs xl:text-md">{tag}</div>
+									class="radial-gradient-bottom flex-grow border text-center flex items-center justify-center border-white/30 rounded-lg px-3 py-2 w-fit">
+									<div class="text-xs font-medium">{tag}</div>
 								</div>
 							{/each}
 						</div>

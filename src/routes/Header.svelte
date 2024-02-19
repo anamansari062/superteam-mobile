@@ -36,7 +36,7 @@
 	</div>
 
 	<div class="rounded-lg sm:rounded-2xl">
-		<button class="explore-saga-btn text-xs md:text-lg">Explore Saga</button>
+		<button class="explore-saga-btn text-xs md:text-base">Explore Saga</button>
 	</div>
 </header>
 

@@ -13,12 +13,12 @@
 
 <div class="px-6 sm:px-12 md:px-24">
 	<img
-		class="absolute top-0 left-0 z-10"
+		class="absolute top-0 left-0 z-10 pointer-events-none"
 		src="/src/lib/images/left_lights.png"
 		alt="Left Spotlight"
 	/>
 	<img
-		class="absolute top-0 right-0 z-10"
+		class="absolute top-0 right-0 z-10 pointer-events-none"
 		src="/src/lib/images/right_lights.png"
 		alt="Right Spotlight"
 	/>

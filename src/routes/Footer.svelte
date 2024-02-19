@@ -17,16 +17,16 @@
 				<h2 class="text-xl font-bold">Mobile</h2>
 			</div>
 			<h3 class="text-sm lg:text-lg xl:text-xl font-normal text-gray-300 text-center md:text-left">There’s never a better time to build consumer apps</h3>
-			<nav class="flex gap-4 justify-center">
+			<nav class="flex gap-4 justify-center text-gray-300">
 				<ul class="flex gap-4 items-center justify-center text-md">
 					<li class="relative" aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-						<a href="/" class="text-white font-medium  hover:text-white">Learn</a>
+						<a href="/learn" class="font-medium  hover:text-white">Learn</a>
 					</li>
 					<li class="relative" aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-						<a href="/about" class="text-white font-medium hover:text-white">Build</a>
+						<a href="/about" class=" font-medium hover:text-white">Build</a>
 					</li>
-					<li class="relative" aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-						<a href="/sverdle" class="text-white font-medium hover:text-white">Earn</a>
+					<li class="relative" aria-current={$page.url.pathname.startsWith('https://earn.superteam.fun') ? 'page' : undefined}>
+						<a href="https://earn.superteam.fun" class="font-medium hover:text-white">Earn</a>
 					</li>
 				</ul>
 			</nav>

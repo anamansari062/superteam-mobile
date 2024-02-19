@@ -25,8 +25,8 @@
 }
 
 .radial-gradient-bottom {
-    background-image: radial-gradient(ellipse at bottom, var(--tw-gradient-stops));
-    --tw-gradient-stops: rgba(245, 158, 11, 0.3), transparent;
+    background-image: radial-gradient(ellipse at bottom, var(--gradient-color), transparent 50%);
+    --gradient-color: rgba(245, 158, 11, 0.3);
 }
 
 .explore-saga-btn {

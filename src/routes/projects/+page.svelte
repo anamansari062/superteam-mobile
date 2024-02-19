@@ -60,13 +60,13 @@
 			<div
 				class="flex items-center gap-2 border border-white/30 rounded-xl p-3 bg-gradient-to-r from-gray-700 to-gray-900">
 				<img class="w-6 h-6" src={add} alt="Load" />
-				<button class="text-white text-sm sm:text-md">Submit your project</button>
+				<button class="text-white text-sm sm:text-md ">Submit your project</button>
 			</div>
 		</div>
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-2">
 		{#each filteredResources as { name, description, tags}}
-			<div class="flex flex-col lg:flex-row gap-4 border border-gray-400/40 rounded-lg p-4" aria-hidden="true" aria-label="View more about this project" on:click={handleClick}>
+			<div class="flex flex-col lg:flex-row gap-4 border border-gray-400/40 rounded-lg p-4 bg-[rgb(2,10,35)] cursor-pointer" aria-hidden="true" aria-label="View more about this project" on:click={handleClick}>
 				<div class="w-24 h-24 p-4 bg-gradient-to-b from-blue-200/10 to-transparent border border-gray-400/40 rounded-md flex justify-center items-center">
 					<img class="w-16 h-16" src={sample_logo} alt="Project Logo" />
 				</div>
@@ -74,9 +74,9 @@
 					<h2 class="text-lg md:text-xl text-white">{name}</h2>
 					<h3 class="text-sm text-gray-300">{description}</h3>
 					<div class="flex flex-row gap-2">
-						{#each tags as tag}
-							<div class="radial-gradient-bottom border border-white/30 rounded-md px-3 py-1">
-								<h5 class="text-xs sm:text-sm text-white">{tag}</h5>
+						{#each tags as tag,i}
+							<div class="radial-gradient-bottom border border-white/30 rounded-md px-3 py-1" style={`--gradient-color:${i%2===1?"rgba(110,63,243,0.4)":'rgba(242,174,64,0.4)'}`}>
+								<h5 class="text-xs text-white">{tag}</h5>
 							</div>
 						{/each}
 					</div>

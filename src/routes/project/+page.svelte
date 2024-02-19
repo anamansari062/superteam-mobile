@@ -13,7 +13,7 @@
 	}
 </script>
 
-<section class="text-white px-8 md:p-16 md:px-36 rounded-lg xl:pb-48 min-h-screen">
+<section class="text-white px-8 md:p-16 md:px-36 rounded-lg xl:pb-32 min-h-screen">
 	<div class="flex flex-row">
 		<div class="max-w-7xl mx-auto">
 			<div class="flex items-center mb-4 cursor-pointer" on:click={handleClick}>
