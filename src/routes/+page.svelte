@@ -1,6 +1,8 @@
 <script>
 	import arrow from '$lib/images/arrow.svg';
 	import line from '$lib/images/line.svg';
+	import left_lights from '$lib/images/left_lights.png';
+	import right_lights from '$lib/images/right_lights.png';
 	import Features from './Features.svelte';
 	import News from './News.svelte';
 	import MobileGrant from './MobileGrant.svelte';
@@ -14,12 +16,12 @@
 <div class="px-6 sm:px-12 md:px-24">
 	<img
 		class="absolute top-0 left-0 z-10 pointer-events-none"
-		src="/src/lib/images/left_lights.png"
+		src={left_lights}
 		alt="Left Spotlight"
 	/>
 	<img
 		class="absolute top-0 right-0 z-10 pointer-events-none"
-		src="/src/lib/images/right_lights.png"
+		src={right_lights}
 		alt="Right Spotlight"
 	/>
 

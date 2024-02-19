@@ -2,9 +2,14 @@
 	import Header from './Header.svelte';
 	import '../app.css';
 	import Footer from './Footer.svelte';
+	import home_bg from '$lib/images/home_bg.png';
 </script>
 
 <div class="app">
+	<div>
+        <img class="absolute top-0 right-0 h-[1175px] top-0 left-0 pointer-events-none -z-10 lg:w-full opacity-60" src={home_bg} alt="Star bg " />
+    </div>
+
 	<Header />
 
 	<main>

@@ -10,6 +10,8 @@
 	import mentor_logo from '$lib/images/mentor_logo.png';
 	import left_arrow from '$lib/images/left_arrow.png';
 	import right_arrow from '$lib/images/right_arrow.png';
+    import ellipse from '$lib/images/ellipse.png';
+    import line_features from '$lib/images/line_features.png';
 	import kotlin from '$lib/images/kotlin.png';
 	import flutter from '$lib/images/flutter.png';
 	import react_native from '$lib/images/react-native.png';
@@ -45,7 +47,7 @@
 
 <section class="flex flex-col flex-grow lg:pt-10 items-center pb-10 relative sm:pb-24 w-full bg-blue-900">
 	<div class="relative searchBar w-72 sm:w-full">
-		<img class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full" src="/src/lib/images/ellipse.png" alt="Star bg" />
+		<img class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full" src={ellipse} alt="Star bg" />
 		<div class="search flex flex-row">
 			<img src={search} alt="Welcome" />
 			<div class="text-md md:text-xl p-2 sm:p-3">App Library</div>
@@ -85,7 +87,7 @@
 		</div>
 		<!-- Line Divider -->
 		<div class="h-full hidden lg:block">
-			<img class="h-full xl:h-[540px] xl:w-3 xl:mt-8 w-full" src="/src/lib/images/line_features.png" alt="Features Divider" />
+			<img class="h-full xl:h-[540px] xl:w-3 xl:mt-8 w-full" src={line_features} alt="Features Divider" />
 		</div>
 		<div class="flex flex-col flex-grow sm:flex-row w-full h-full mt-12 md:mt-0">
 			<!-- Build Section -->
