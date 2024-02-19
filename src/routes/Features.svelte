@@ -56,17 +56,17 @@
 	<div class="flex flex-col sm:flex-row w-full h-full px-4 sm:px-8 py-0 gap-x-4 sm:gap-x-12">
 		<!-- Learn Section -->
 		<div class="w-full flex flex-col">
-			<div class="flex flex-row justify-center sm:justify-between items-center h-16 sm:h-20">
-				<img class="sm:mt-5 ml-36 arrow_left hidden xl:block" src={left_arrow} alt="Left Arrow" />
+			<div class="flex flex-row justify-center items-center h-16 sm:h-20">
+				<img class="sm:mt-5 arrow_left hidden xl:block" src={left_arrow} alt="Left Arrow" />
 				<div class="featureButton flex items-center gap-2">
 					<img src={bolt} alt="Welcome" class="w-6 h-6" />
 					<a href="learn/" class="text-white z-30">Learn</a>
 				</div>
-				<img class="sm:mt-5 mr-36 arrow_right hidden xl:block" src={right_arrow} alt="Right Arrow" />
+				<img class="sm:mt-5 arrow_right hidden xl:block" src={right_arrow} alt="Right Arrow" />
 			</div>
 			<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-12 ">
-				{#each features_block1 as { id, logo, title, subtitle }}
-					<div key={id} class="featureCard">
+				{#each features_block1 as { logo, title, subtitle }}
+					<div class="featureCard">
 						<img class="logo" src={logo} alt={title} />
 						<div class="gap-8 mt-6">
 							<div class="text-xl md:text-2xl font-semibold">{title}</div>
@@ -75,10 +75,10 @@
 					</div>
 				{/each}
 				<div class="w-full flex flex-col">
-					<div class="grid grid-cols-2 gap-4 sm:gap-4">
-						{#each additionalFeaturesBlock1 as { id, logo, title }}
-							<div key={id} class="featureCardLogo border p-1 rounded-lg flex-col">
-								<img class="logo ml-3 scale-75" src={logo} alt={title} />
+					<div class="grid grid-cols-2 justify-center items-center place-content-center gap-4 sm:gap-4">
+						{#each additionalFeaturesBlock1 as { logo, title }}
+							<div class="featureCardLogo border p-1 rounded-lg flex-col">
+								<img class="logo mx-auto scale-75" src={logo} alt={title} />
 							</div>
 						{/each}
 					</div>
@@ -92,19 +92,19 @@
 		<div class="flex flex-col flex-grow sm:flex-row w-full h-full mt-12 md:mt-0">
 			<!-- Build Section -->
 			<div class="w-full flex flex-col flex-grow">
-				<div class="flex flex-row justify-center sm:justify-between items-center h-16 sm:h-20">
-					<img class="sm:mt-5 ml-36 arrow_left hidden xl:block" src={left_arrow} alt="Left Arrow" />
+				<div class="flex flex-row justify-center items-center h-16 sm:h-20">
+					<img class="sm:mt-5 arrow_left hidden xl:block" src={left_arrow} alt="Left Arrow" />
 					<div class="featureButton flex items-center gap-2">
 						<img src={bolt} alt="Welcome" class="w-6 h-6" />
 						<a href="/projects" class="text-white z-30">Build</a>
 					</div>
-					<img class="sm:mt-5 mr-36 hidden arrow_right xl:block" src={right_arrow} alt="Right Arrow" />
+					<img class="sm:mt-5 hidden arrow_right xl:block" src={right_arrow} alt="Right Arrow" />
 				</div>
 				<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-12">
 					{#each features_block2 as { id, logo, title, subtitle }}
-						<div key={id} class="featureCard hover:bg-gradient-radial from-blue-300 to-blue-700/50 ">
+						<div class="featureCard hover:bg-gradient-radial from-blue-300 to-blue-700/50 ">
 							<img class="logo" src={logo} alt={title} />
-							<div class="gap-8 mt-6">
+							<div class="gap-8 mt-10">
 								<div class="text-xl md:text-2xl font-semibold">{title}</div>
 								<div class="text-slate-200">{subtitle}</div>
 							</div>

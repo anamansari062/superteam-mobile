@@ -64,7 +64,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-2">
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-2 w-full">
 		{#each filteredResources as { name, description, tags}}
 			<div class="flex flex-col lg:flex-row gap-4 border border-gray-400/40 rounded-lg p-4 bg-[rgb(2,10,35)] cursor-pointer" aria-hidden="true" aria-label="View more about this project" on:click={handleClick}>
 				<div class="w-24 h-24 p-4 bg-gradient-to-b from-blue-200/10 to-transparent border border-gray-400/40 rounded-md flex justify-center items-center">
