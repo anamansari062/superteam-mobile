@@ -59,7 +59,7 @@
 				{/each}
 			</select>
 			<div
-				class="flex items-center gap-2 border border-white/30 rounded-xl p-3 bg-gradient-to-r from-gray-700 to-gray-900">
+				class="flex items-center gap-2 border border-white/30 rounded-xl p-3 explore-saga-btn">
 				<img class="w-6 h-6" src={add} alt="Load" />
 				<button class="text-white text-sm sm:text-md ">Submit your project</button>
 			</div>

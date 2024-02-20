@@ -54,11 +54,11 @@
 					<option style="background-color: #010a23;" value={tag}>{tag.toLowerCase()}</option>
 				{/each}
 			</select>
-<!--			<div-->
-<!--				class="flex items-center gap-2 border border-white/30 rounded-xl p-3 bg-gradient-to-r from-gray-700 to-gray-900">-->
-<!--				<img class="w-6 h-6" src={add} alt="Load" />-->
-<!--				<button class="text-white text-sm sm:text-md">Submit your project</button>-->
-<!--			</div>-->
+			<div
+				class="flex items-center gap-2 border border-white/30 rounded-xl p-3 explore-saga-btn">
+				<img class="w-6 h-6" src={add} alt="Load" />
+				<button class="text-white text-sm sm:text-md">Submit your project</button>
+			</div>
 		</div>
 	</div>
 	<div class="grid grid-cols-1 gap-8 px-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -74,10 +74,16 @@
 							<img src={arrow_up_right} alt="View" class="sm:w-5 sm:h-5" />
 						</button>
 						<div class="flex flex-row gap-2 text-center">
-							{#each tags as tag}
-								<div
-									class="radial-gradient-bottom flex-grow border text-center flex items-center justify-center border-white/30 rounded-lg px-3 py-2 w-fit">
-									<div class="text-xs font-medium">{tag}</div>
+							<!--{#each tags as tag}-->
+							<!--	<div-->
+							<!--		class="radial-gradient-bottom flex-grow border text-center flex items-center justify-center border-white/30 rounded-lg px-3 py-2 w-fit">-->
+							<!--		<div class="text-xs font-medium">{tag}</div>-->
+							<!--	</div>-->
+							<!--{/each}-->
+							{#each tags as tag, i}
+								<div class="radial-gradient-bottom border border-white/30 rounded-md px-3 py-2"
+										 style={`--gradient-color:${i % 2 === 1 ? "rgba(110,63,243,0.4)" : 'rgba(242,174,64,0.4)'}`}>
+									<h5 class="text-xs text-white">{tag}</h5>
 								</div>
 							{/each}
 						</div>
