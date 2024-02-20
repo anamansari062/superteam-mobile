@@ -8,7 +8,7 @@
 		{ name: 'Home', url: "/" },
 		{ name: 'Learn', url: "/learn" },
 		{ name: 'Projects', url: "/projects" },
-		{ name: 'Earn', url: 'https://earn.superteam.fun/' }
+		// { name: 'Earn', url: 'https://earn.superteam.fun/' }
 	];
 
 	let path;
@@ -26,7 +26,7 @@
 
 	<div class="flex-grow hidden md:flex md:items-center md:justify-center z-30">
 		<nav>
-			<ul class="flex items-center justify-center gap-4 border px-8 py-3 rounded-3xl border-slate-600 text-white/50">
+			<ul class="flex items-center justify-center gap-6 border px-8 py-3 rounded-3xl border-slate-600 text-white/50">
 				{#each navItems as item}
 					<li>
 						<a href={item.url} class:active={path === item.url} class="text-white/50 pb-3.5">
@@ -39,7 +39,9 @@
 	</div>
 
 	<div class="rounded-lg sm:rounded-2xl hidden md:block">
-		<button class="explore-saga-btn text-xs md:text-base">Explore Saga</button>
+		<a href="https://solanamobile.com/hardware">
+			<button class="explore-saga-btn text-xs md:text-base">Explore Saga</button>
+		</a>
 	</div>
 
 	<div class="md:hidden">

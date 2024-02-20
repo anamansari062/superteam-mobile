@@ -18,31 +18,25 @@
 	import swift from '$lib/images/swift.png';
 
 	const features_block1 = [
-		{ id: 1, logo: sms_logo, title: 'SMS', subtitle: 'Solana Mobile Stack' },
-		{ id: 2, logo: pwa_logo, title: 'PWAs', subtitle: 'Progressive Web Apps' },
-		{ id: 3, logo: sdk_logo, title: 'SDKs', subtitle: 'Accelerate Development' },
+		{ id: 1, logo: sms_logo, title: 'SMS', subtitle: 'Solana Mobile Stack', tags: ['Saganize', 'SMS']},
+		{ id: 2, logo: pwa_logo, title: 'PWAs', subtitle: 'Progressive Web Apps', tags: ['Saganize', 'SMS'] },
+		{ id: 3, logo: sdk_logo, title: 'SDKs', subtitle: 'Accelerate Development', tags: ['Saganize', 'SMS'] },
 	];
 
 	const features_block2 = [
-		{ id: 1, logo: idea_logo, title: 'Idea Bank', subtitle: 'Curated Ideas by Founder' },
-		{ id: 2, logo: earn_logo, title: 'Earn', subtitle: 'Earn your first Crypto' },
-		{ id: 3, logo: grant_logo, title: 'Grants', subtitle: 'Get help to Build' },
-		{ id: 4, logo: mentor_logo, title: 'Mentor', subtitle: 'Learn by Experience' },
+		{ id: 1, logo: idea_logo, title: 'Idea Bank', subtitle: 'Curated Ideas by Founder', link:'https://build.superteam.fun/ideas?category=Mobile'},
+		{ id: 2, logo: earn_logo, title: 'Earn', subtitle: 'Earn your first Crypto', link:"https://earn.superteam.fun/" },
+		{ id: 3, logo: grant_logo, title: 'Grants', subtitle: 'Get help to Build', link:"https://earn.superteam.fun/grants/" },
+		{ id: 4, logo: mentor_logo, title: 'Mentor', subtitle: 'Learn by Experience', link:"https://earn.superteam.fun/mentor/" },
 	];
 
 	const additionalFeaturesBlock1 = [
-		{ id: 4, logo: kotlin, title: 'Kotlin', subtitle: '' },
-		{ id: 5, logo: flutter, title: 'Flutter', subtitle: '' },
-		{ id: 6, logo: react_native, title: 'React Native', subtitle: '' },
-		{ id: 7, logo: swift, title: 'Swift', subtitle: '' }
+		{ id: 4, logo: kotlin, title: 'Kotlin', subtitle: '', tags: 'Kotlin' },
+		{ id: 5, logo: flutter, title: 'Flutter', subtitle: '', tags: 'Flutter' },
+		{ id: 6, logo: react_native, title: 'React Native', subtitle: '', tags: 'React Native' },
+		{ id: 7, logo: swift, title: 'Swift', subtitle: '', tags: 'Swift' }
 	];
 
-	// const additionalFeaturesBlock2 = [
-	// 	{ id: 4, logo: idea_logo, title: 'Idea', subtitle: '' },
-	// 	{ id: 5, logo: earn_logo, title: 'Earn', subtitle: '' },
-	// 	{ id: 6, logo: grant_logo, title: 'Grant', subtitle: '' },
-	// 	{ id: 7, logo: mentor_logo, title: 'Mentor', subtitle: '' }
-	// ];
 </script>
 
 <section id="get_started" class="flex flex-col flex-grow lg:pt-10 items-center pb-10 relative sm:pb-24 w-full bg-blue-900">
@@ -76,7 +70,7 @@
 				{/each}
 				<div class="w-full flex flex-col">
 					<div class="grid grid-cols-2 justify-center items-center place-content-center gap-4 sm:gap-4">
-						{#each additionalFeaturesBlock1 as { logo, title }}
+						{#each additionalFeaturesBlock1 as { logo, title,tags }}
 							<div class="featureCardLogo border p-1 rounded-lg flex-col additionalFeaturesBlock1">
 								<img class="logo mx-auto scale-75" src={logo} alt={title} />
 							</div>
@@ -101,7 +95,8 @@
 					<img class="sm:mt-5 hidden arrow_right xl:block" src={right_arrow} alt="Right Arrow" />
 				</div>
 				<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-12">
-					{#each features_block2 as { id, logo, title, subtitle }}
+					{#each features_block2 as { link, logo, title, subtitle }}
+						<a href={link}>
 						<div class="featureCard">
 							<img class="logo" src={logo} alt={title} />
 							<div class="gap-8 md:mt-6 mt-3">
@@ -109,6 +104,7 @@
 								<div class="text-slate-200">{subtitle}</div>
 							</div>
 						</div>
+						</a>
 					{/each}
 				</div>
 			</div>

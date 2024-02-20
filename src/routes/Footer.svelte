@@ -25,15 +25,17 @@
 					<li class="relative" aria-current={$page.url.pathname === '/projects' ? 'page' : undefined}>
 						<a href="/projects" class=" font-medium hover:text-white">Projects</a>
 					</li>
-					<li class="relative" aria-current={$page.url.pathname.startsWith('https://earn.superteam.fun') ? 'page' : undefined}>
-						<a href="https://earn.superteam.fun" class="font-medium hover:text-white">Earn</a>
-					</li>
+<!--					<li class="relative" aria-current={$page.url.pathname.startsWith('https://earn.superteam.fun') ? 'page' : undefined}>-->
+<!--						<a href="https://earn.superteam.fun" class="font-medium hover:text-white">Earn</a>-->
+<!--					</li>-->
 				</ul>
 			</nav>
 		</div>
 		<div class="flex flex-col gap-16 justify-between items-center md:items-end">
 			<div class="w-36 h-12 flex items-center justify-center">
-				<button class="text-white text-sm font-medium explore-saga-btn">Explore Saga</button>
+				<a href="https://solanamobile.com/hardware">
+					<button class="text-white text-sm font-medium explore-saga-btn">Explore Saga</button>
+				</a>
 			</div>
 			<div class="flex flex-row gap-4 justify-center">
 				<img src={x_logo} alt="X" class="h-6" />

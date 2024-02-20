@@ -16,13 +16,17 @@
 			<div class="flex flex-col w-full h-full gap-8 mx-auto">
 				<div class="smallCard bg-[url('./lib/images/toly_img.png')] flex flex-col justify-end w-full h-52 sm:h-44 border border-white/20 rounded-xl bg-cover bg-center">
 					<div class="cardContent px-5 py-3 rounded-b-xl bg-black/20 backdrop-blur-sm sm:backdrop-blur-md">
-						<h2 class="text-2xl">Saga</h2>
+						<a href="https://solanamobile.com/hardware">
+							<h2 class="text-2xl">Saga</h2>
+						</a>
 						<h3 class="text-gray-300">Checkout first crypto phone ever</h3>
 					</div>
 				</div>
 				<div class="smallCard bg-[url('./lib/images/hackathon.png')] flex flex-col justify-end w-full h-52 sm:h-44 border border-white/20 rounded-xl bg-cover bg-center">
 					<div class="cardContent px-5 py-3 rounded-b-xl bg-black/20 backdrop-blur-sm sm:backdrop-blur-md">
-						<h2 class="text-2xl">Hackathon Winners</h2>
+						<a href="https://build.superteam.fun/past-hackathon-winners/Mobile">
+							<h2 class="text-2xl">Hackathon Winners</h2>
+						</a>
 						<h3 class="text-gray-300">Previous winner mobile projects</h3>
 					</div>
 				</div>

@@ -5,7 +5,7 @@
 			<h2 class="text-md md:text-lg font-normal leading-7 text-gray-300">Solana Mobile offers a separate grants for folks building in mobile</h2>
 		</div>
 		<div class="flex flex-row justify-center items-center">
-			<button class="text-white explore-saga-btn">Apply</button>
+			<a href="https://docs.solanamobile.com/dapp-publishing/intro"><button class="text-white explore-saga-btn">Publish</button></a>
 		</div>
 	</div>
 </section>

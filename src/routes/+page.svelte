@@ -28,7 +28,7 @@
 		<div class="flex items-center justify-center gap-2 border border-transparent bg-[linear-gradient(289.83deg,rgba(51,51,51,0.5)-0.09%,rgba(51,51,51,0)39.05%,rgba(51,51,51,0.25)99.93%)] rounded-full py-1 px-4">
 			<h5 class="text-xs md:text-sm text-[#FFFFFFB2]">Get exciting opportunities to earn</h5>
 			<img src={line} alt="Line" class="hidden sm:block" />
-			<h5 class="text-xs md:text-sm font-bold">Explore Earn</h5>
+			<a href="https://earn.superteam.fun/" class="text-xs md:text-sm font-bold">Explore Earn</a>
 			<img src={arrow} alt="Go" class="w-4 h-4" />
 		</div>
 		<h1 class="mt-4 text-3xl lg:text-6xl font-medium text-center">All things Mobile</h1>
