@@ -1,27 +1,29 @@
 <script>
 	import search from '$lib/images/search.svg';
 	import add from '$lib/images/add.svg';
-	import { goto } from '$app/navigation';
-	import data from './data.json';
+
+	// import { goto } from '$app/navigation';
 	import sample_logo from '$lib/images/sample_logo.png';
 
-	function handleClick() {
-		goto('/project');
-	}
+	export let data;
+
+	// function handleClick() {
+	// 	goto('/project');
+	// }
 
 	let searchTerm = '';
-	let filteredResources = data;
+	let filteredResources = data.items;
 
 	let selectedTag = '';
 
-	$: filteredResources = data.filter(resource =>
+	$: filteredResources = data.items.filter(resource =>
 		resource.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
 		(selectedTag === '' || resource.tags.includes(selectedTag))
 	);
 
 	function getUniqueTags(data) {
 		let uniqueTags = [];
-		data.forEach(resource => {
+		data.items.forEach(resource => {
 			resource.tags.forEach(tag => {
 				if (!uniqueTags.includes(tag)) {
 					uniqueTags.push(tag);
@@ -30,7 +32,6 @@
 		});
 		return uniqueTags;
 	}
-
 </script>
 
 <section class="flex flex-col items-center pt-24 pb-24 w-full max-w-6xl mx-auto gap-16">
@@ -65,17 +66,21 @@
 		</div>
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-2 w-full">
-		{#each filteredResources as { name, description, tags}}
-			<div class="flex flex-col lg:flex-row gap-4 border border-gray-400/40 rounded-lg p-4 bg-[rgb(2,10,35)] cursor-pointer" aria-hidden="true" aria-label="View more about this project" on:click={handleClick}>
-				<div class="w-24 h-24 p-4 bg-gradient-to-b from-blue-200/10 to-transparent border border-gray-400/40 rounded-md flex justify-center items-center">
+		{#each filteredResources as choice}
+			<div
+				class="flex flex-col lg:flex-row gap-4 border border-gray-400/40 rounded-lg p-4 bg-[rgb(2,10,35)] cursor-pointer"
+				aria-hidden="true" aria-label="View more about this project">
+				<div
+					class="w-24 h-24 p-4 bg-gradient-to-b from-blue-200/10 to-transparent border border-gray-400/40 rounded-md flex justify-center items-center">
 					<img class="w-16 h-16" src={sample_logo} alt="Project Logo" />
 				</div>
 				<div class="flex flex-col gap-2">
-					<h2 class="text-lg md:text-xl text-white">{name}</h2>
-					<h3 class="text-sm text-gray-300">{description}</h3>
+					<a href={`/projects/${choice.slug}`} class="text-lg md:text-xl text-white">{choice.name}</a>
+					<h3 class="text-sm text-gray-300">{choice.description}</h3>
 					<div class="flex flex-row gap-2">
-						{#each tags as tag,i}
-							<div class="radial-gradient-bottom border border-white/30 rounded-md px-3 py-1" style={`--gradient-color:${i%2===1?"rgba(110,63,243,0.4)":'rgba(242,174,64,0.4)'}`}>
+						{#each choice.tags as tag, i}
+							<div class="radial-gradient-bottom border border-white/30 rounded-md px-3 py-1"
+									 style={`--gradient-color:${i % 2 === 1 ? "rgba(110,63,243,0.4)" : 'rgba(242,174,64,0.4)'}`}>
 								<h5 class="text-xs text-white">{tag}</h5>
 							</div>
 						{/each}
