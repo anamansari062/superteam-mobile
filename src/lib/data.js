@@ -8,6 +8,11 @@ const projects  =[
 		"post_name": "Helium",
 		"sub_title": "The Helium Network represents a paradigm shift for decentralized wireless infrastructure",
 		"post_description": "Helium is a decentralized machine network that enables devices anywhere in the world to wirelessly connect to the internet and geolocate themselves without the need for power-hungry satellite location hardware or expensive cellular plans.",
+		"socials":{
+			"x":"https://twitter.com/mirror_world",
+			"discord":"https://discord.com/invite/mirrorworld",
+			"github":"https://t.me/mirrorworld"
+		}
 	},
 	{
 		"name": "Project Name 2",
@@ -18,6 +23,11 @@ const projects  =[
 		"post_name": "Helium",
 		"sub_title": "The Helium Network represents a paradigm shift for decentralized wireless infrastructure",
 		"post_description": "Helium is a decentralized machine network that enables devices anywhere in the world to wirelessly connect to the internet and geolocate themselves without the need for power-hungry satellite location hardware or expensive cellular plans.",
+		"socials":{
+			"x":"https://twitter.com/mirror_world",
+			"discord":"https://discord.com/invite/mirrorworld",
+			"github":"https://t.me/mirrorworld"
+		}
 	},
 	{
 		"name": "Mirror World Smart SDK",
@@ -28,6 +38,11 @@ const projects  =[
 		"post_name": "Helium",
 		"sub_title": "The Helium Network represents a paradigm shift for decentralized wireless infrastructure",
 		"post_description": "Helium is a decentralized machine network that enables devices anywhere in the world to wirelessly connect to the internet and geolocate themselves without the need for power-hungry satellite location hardware or expensive cellular plans.",
+		"socials":{
+			"x":"https://twitter.com/mirror_world",
+			"discord":"https://discord.com/invite/mirrorworld",
+			"github":"https://t.me/mirrorworld"
+		}
 	},
 	{
 		"name": "Project Name 2",
@@ -38,6 +53,11 @@ const projects  =[
 		"post_name": "Helium",
 		"sub_title": "The Helium Network represents a paradigm shift for decentralized wireless infrastructure",
 		"post_description": "Helium is a decentralized machine network that enables devices anywhere in the world to wirelessly connect to the internet and geolocate themselves without the need for power-hungry satellite location hardware or expensive cellular plans.",
+		"socials":{
+			"x":"https://twitter.com/mirror_world",
+			"discord":"https://discord.com/invite/mirrorworld",
+			"github":"https://t.me/mirrorworld"
+		}
 	},
 	{
 		"name": "Mirror World Smart SDK",
@@ -48,6 +68,11 @@ const projects  =[
 		"post_name": "Helium",
 		"sub_title": "The Helium Network represents a paradigm shift for decentralized wireless infrastructure",
 		"post_description": "Helium is a decentralized machine network that enables devices anywhere in the world to wirelessly connect to the internet and geolocate themselves without the need for power-hungry satellite location hardware or expensive cellular plans.",
+		"socials":{
+			"x":"https://twitter.com/mirror_world",
+			"discord":"https://discord.com/invite/mirrorworld",
+			"github":"https://t.me/mirrorworld"
+		}
 	},
 	{
 		"name": "Project Name 2",
@@ -58,6 +83,11 @@ const projects  =[
 		"post_name": "Helium",
 		"sub_title": "The Helium Network represents a paradigm shift for decentralized wireless infrastructure",
 		"post_description": "Helium is a decentralized machine network that enables devices anywhere in the world to wirelessly connect to the internet and geolocate themselves without the need for power-hungry satellite location hardware or expensive cellular plans.",
+		"socials":{
+			"x":"https://twitter.com/mirror_world",
+			"discord":"https://discord.com/invite/mirrorworld",
+			"github":"https://t.me/mirrorworld"
+		}
 	}
 ];
 

@@ -11,5 +11,6 @@ export function load({params}) {
 		sub_title: project.sub_title,
 		post_description: project.post_description,
 		tags: project.tags,
+		socials: project.socials
 	}
 }

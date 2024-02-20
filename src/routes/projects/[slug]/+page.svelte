@@ -44,11 +44,16 @@
 							{/each}
 						</div>
 					</div>
+					<div class="flex flex-row gap-4 justify-start items-end mt-4 lg:hidden">
+						<img src={x_logo} alt="X" class="h-6" />
+						<img src={discord_logo} alt="Discord" class="h-6" />
+						<img src={github_logo} alt="Github" class="h-6" />
+					</div>
 				</div>
 				<button
 					class="xl:ml-36 lg:mr-24 flex items-center gap-2  rounded-xl px-4 py-2 radial-gradient-blue border border-blue-50/20 transition duration-300">
 					View
-					<img src={external_link} alt="View" class="w-4 h-4 xl:mx-2" />
+					<img src={external_link} alt="View" class="w-4 h-4 xl:mx-2 md:mr-5" />
 				</button>
 			</div>
 			<div class="mt-16">

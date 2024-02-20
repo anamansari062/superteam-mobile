@@ -23,7 +23,7 @@
 						<a href="/learn" class="font-medium  hover:text-white">Learn</a>
 					</li>
 					<li class="relative" aria-current={$page.url.pathname === '/projects' ? 'page' : undefined}>
-						<a href="/projects" class=" font-medium hover:text-white">Build</a>
+						<a href="/projects" class=" font-medium hover:text-white">Projects</a>
 					</li>
 					<li class="relative" aria-current={$page.url.pathname.startsWith('https://earn.superteam.fun') ? 'page' : undefined}>
 						<a href="https://earn.superteam.fun" class="font-medium hover:text-white">Earn</a>

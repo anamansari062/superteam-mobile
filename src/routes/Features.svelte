@@ -45,10 +45,10 @@
 	// ];
 </script>
 
-<section class="flex flex-col flex-grow lg:pt-10 items-center pb-10 relative sm:pb-24 w-full bg-blue-900">
+<section id="get_started" class="flex flex-col flex-grow lg:pt-10 items-center pb-10 relative sm:pb-24 w-full bg-blue-900">
 	<div class="relative searchBar w-72 sm:w-full">
 		<img class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full" src={ellipse} alt="Star bg" />
-		<div class="search flex flex-row">
+		<div class="search flex-row hidden md:flex">
 			<img src={search} alt="Welcome" />
 			<div class="text-md md:text-xl p-2 sm:p-3">App Library</div>
 		</div>
@@ -64,7 +64,7 @@
 				</div>
 				<img class="sm:mt-5 arrow_right hidden xl:block" src={right_arrow} alt="Right Arrow" />
 			</div>
-			<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-12 ">
+			<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-12">
 				{#each features_block1 as { logo, title, subtitle }}
 					<div class="featureCard">
 						<img class="logo" src={logo} alt={title} />
@@ -77,7 +77,7 @@
 				<div class="w-full flex flex-col">
 					<div class="grid grid-cols-2 justify-center items-center place-content-center gap-4 sm:gap-4">
 						{#each additionalFeaturesBlock1 as { logo, title }}
-							<div class="featureCardLogo border p-1 rounded-lg flex-col">
+							<div class="featureCardLogo border p-1 rounded-lg flex-col additionalFeaturesBlock1">
 								<img class="logo mx-auto scale-75" src={logo} alt={title} />
 							</div>
 						{/each}
@@ -102,9 +102,9 @@
 				</div>
 				<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-12">
 					{#each features_block2 as { id, logo, title, subtitle }}
-						<div class="featureCard hover:bg-gradient-radial from-blue-300 to-blue-700/50 ">
+						<div class="featureCard">
 							<img class="logo" src={logo} alt={title} />
-							<div class="gap-8 mt-10">
+							<div class="gap-8 md:mt-6 mt-3">
 								<div class="text-xl md:text-2xl font-semibold">{title}</div>
 								<div class="text-slate-200">{subtitle}</div>
 							</div>
@@ -136,6 +136,10 @@
         border: 1px solid;
         border-color: #ffffff4d;
     }
+
+		.additionalFeaturesBlock1:hover{
+			background-color: #ffffff0d;
+		}
 
     section {
         display: flex;
@@ -187,7 +191,7 @@
 				border-radius: 8px;
 				width: 100%;
 				height: 100%;
-				padding: 20px;
+				padding: 12px;
 				justify-content: space-between;
 				background-image: radial-gradient(circle at top, #ffffff26 0%, #ffffff00 70%);
 		}
