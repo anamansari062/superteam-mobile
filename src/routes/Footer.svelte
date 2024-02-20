@@ -38,10 +38,18 @@
 				</a>
 			</div>
 			<div class="flex flex-row gap-4 justify-center">
-				<img src={x_logo} alt="X" class="h-6" />
-				<img src={discord_logo} alt="Discord" class="h-6" />
-				<img src={mail_logo} alt="Mail" class="h-6" />
-				<img src={github_logo} alt="Github" class="h-6" />
+				<a href="https://twitter.com/superteamearn">
+					<img src={x_logo} alt="X" class="h-6"  />
+				</a>
+				<a href="https://discord.com/invite/Mq3ReaekgG" >
+					<img src={discord_logo} alt="Discord" class="h-6" />
+				</a>
+				<a href="/">
+					<img src={mail_logo} alt="Mail" class="h-6" />
+				</a>
+				<a href="https://github.com/SuperteamDAO">
+					<img src={github_logo} alt="Github" class="h-6" />
+				</a>
 			</div>
 		</div>
 	</div>
