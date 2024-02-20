@@ -1,6 +1,8 @@
 <script>
 	import { page } from '$app/stores';
 	import logo from '$lib/images/st-logo.svg';
+	import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
+	import { Menu } from 'lucide-svelte';
 
 	const navItems = [
 		{ name: 'Home', url: "/" },
@@ -19,7 +21,7 @@
 		<a href="/" class="self-center">
 			<img src={logo} alt="Superteam" />
 		</a>
-		<h2 class="mb-3">Mobile</h2>
+		<h2 class="">Mobile</h2>
 	</div>
 
 	<div class="flex-grow hidden md:flex md:items-center md:justify-center z-30">
@@ -27,7 +29,7 @@
 			<ul class="flex items-center justify-center gap-4 border px-8 py-3 rounded-3xl border-slate-600 text-white/50">
 				{#each navItems as item}
 					<li>
-						<a href={item.url} class:active={path === item.url} class="text-white/50">
+						<a href={item.url} class:active={path === item.url} class="text-white/50 pb-3.5">
 							{item.name}
 						</a>
 					</li>
@@ -36,12 +38,37 @@
 		</nav>
 	</div>
 
-	<div class="rounded-lg sm:rounded-2xl">
+	<div class="rounded-lg sm:rounded-2xl hidden md:block">
 		<button class="explore-saga-btn text-xs md:text-base">Explore Saga</button>
+	</div>
+
+	<div class="md:hidden">
+		<DropdownMenu.Root>
+			<DropdownMenu.Trigger><Menu /></DropdownMenu.Trigger>
+			<DropdownMenu.Content class="bg-[#010a23]">
+				<DropdownMenu.Group class="bg-[#010a23]">
+					{#each navItems as item}
+						<DropdownMenu.Item class="text-white">
+							<a href={item.url} class:active={path === item.url} class="pb-2">
+								{item.name}
+							</a>
+						</DropdownMenu.Item>
+					{/each}
+				</DropdownMenu.Group>
+			</DropdownMenu.Content>
+		</DropdownMenu.Root>
 	</div>
 </header>
 
 <style>
+    .dropdown-item {
+        padding-bottom: 2px;
+    }
+
+    .dropdown-item:hover {
+        background-color: #ffffff11;
+    }
+
     .explore-saga-btn {
         background-image: radial-gradient(ellipse at top, #ffffff33  0%, #ffffff00  70%);
         color: #ffffff;
@@ -59,7 +86,7 @@
     a {
         position: relative;
         transition: color  0.3s ease;
-				padding-bottom: 14px;
+        /*padding-bottom: 14px;*/
     }
 
     a::after {
@@ -73,17 +100,17 @@
         opacity:  0;
         transition: opacity  0.3s ease-in, transform  0.3s ease;
         transform: translateY(100%);
-				border-radius: 5px;
+        border-radius: 5px;
     }
 
     a.active::after {
         opacity:  1;
         transform: translateY(0);
-				box-shadow: white 0px 0px 10px 0px;
+        box-shadow: white 0px 0px 10px 0px;
     }
 
-		.active{
-			color: #ffffff;
-		}
+    .active{
+        color: #ffffff;
+    }
 
 </style>

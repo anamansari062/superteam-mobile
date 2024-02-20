@@ -2,6 +2,8 @@
 	import search from '$lib/images/search.svg';
 	import add from '$lib/images/add.svg';
 
+	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
+
 	// import { goto } from '$app/navigation';
 	import sample_logo from '$lib/images/sample_logo.png';
 
@@ -52,12 +54,20 @@
 			/>
 		</div>
 		<div class="flex flex-col justify-start items-start lg:flex-row gap-4 lg:items-center">
-			<select bind:value={selectedTag} class="border border-slate-200/30 rounded-xl p-3 bg-[#010a23] text-white">
-				<option value="">Select Category</option>
-				{#each getUniqueTags(data) as tag}
-					<option style="background-color: #010a23; color: #fff;" value={tag}>{tag.toLowerCase()}</option>
-				{/each}
-			</select>
+			<DropdownMenu.Root>
+				<DropdownMenu.Trigger class="explore-saga-btn text-black px-3 py-2 rounded-xl">
+					{selectedTag || 'Select Category'}
+				</DropdownMenu.Trigger>
+				<DropdownMenu.Content class="bg-[#010a23] text-white shadow-lg rounded mt-2">
+					<DropdownMenu.Group>
+						{#each getUniqueTags(data) as tag}
+							<DropdownMenu.Item on:click={() => selectedTag = tag}>
+								<span class="block px-4 py-2">{tag}</span>
+							</DropdownMenu.Item>
+						{/each}
+					</DropdownMenu.Group>
+				</DropdownMenu.Content>
+			</DropdownMenu.Root>
 			<div
 				class="flex items-center gap-2 border border-white/30 rounded-xl p-3 explore-saga-btn">
 				<img class="w-6 h-6" src={add} alt="Load" />
