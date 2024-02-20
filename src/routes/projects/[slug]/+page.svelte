@@ -13,6 +13,9 @@
 	// 	goto('/projects');
 	// }
 	export let data;
+	let x = data.socials.x;
+	let discord = data.socials.discord;
+	let github = data.socials.github;
 </script>
 
 <section class="text-white px-8 md:p-16 md:px-36 rounded-lg xl:pb-32 min-h-screen">
@@ -45,9 +48,15 @@
 						</div>
 					</div>
 					<div class="flex flex-row gap-4 justify-start items-end mt-4 lg:hidden">
-						<img src={x_logo} alt="X" class="h-6" />
-						<img src={discord_logo} alt="Discord" class="h-6" />
-						<img src={github_logo} alt="Github" class="h-6" />
+						<a href={data.socials.x} target="_blank" rel="noopener noreferrer">
+							<img src={x_logo} alt="X" class="h-6 cursor-pointer" />
+						</a>
+						<a href={data.socials.discord} target="_blank" rel="noopener noreferrer">
+							<img src={discord_logo} alt="Discord" class="h-6" />
+						</a>
+						<a href={data.socials.github} target="_blank" rel="noopener noreferrer">
+							<img src={github_logo} alt="Github" class="h-6" />
+						</a>
 					</div>
 				</div>
 				<button
@@ -68,9 +77,15 @@
 			<div class="mt-8 hidden lg:block ">
 				<h2 class="text-xl text-center font-semibold mb-2">Links</h2>
 				<div class="flex flex-row gap-4 mx-24 justify-center items-end mt-4 ">
-					<img src={x_logo} alt="X" class="h-6" />
-					<img src={discord_logo} alt="Discord" class="h-6" />
-					<img src={github_logo} alt="Github" class="h-6" />
+					<a href={data.socials.x} target="_blank" rel="noopener noreferrer">
+						<img src={x_logo} alt="X" class="h-6 cursor-pointer" />
+					</a>
+					<a href={data.socials.discord} target="_blank" rel="noopener noreferrer">
+						<img src={discord_logo} alt="Discord" class="h-6" />
+					</a>
+					<a href={data.socials.github} target="_blank" rel="noopener noreferrer">
+						<img src={github_logo} alt="Github" class="h-6" />
+					</a>
 				</div>
 			</div>
 		</div>

@@ -11,7 +11,7 @@ const projects  =[
 		"socials":{
 			"x":"https://twitter.com/mirror_world",
 			"discord":"https://discord.com/invite/mirrorworld",
-			"github":"https://t.me/mirrorworld"
+			"github":"https://t.me/sdk_mirrorworld"
 		}
 	},
 	{
