@@ -17,46 +17,39 @@
 
 	let inputElement: HTMLInputElement;
 
-
-	$:console.log("search term", $searchTerm)
+	$: console.log('search term', $searchTerm);
 
 	let filteredResources = data;
 
-	// $: filteredResources = data.filter(resource =>
-	// 	resource.title.toLowerCase().includes($searchTerm?.toLowerCase() ?? '') &&
-	// 	($selectedTag === '' || resource.tags.includes($selectedTag ?? ''))
-	// );
-
 	$: filteredResources = data.filter((resource) => {
 		if (!$searchTerm || $searchTerm === '') return resource;
-		if (
-			resource.title?.toLowerCase().includes($searchTerm.toLowerCase())
-		) {
-			$selectedTag = 'all';
+		if (resource.title?.toLowerCase().includes($searchTerm.toLowerCase())) {
 			return resource;
 		}
 	});
-	// $: filteredResources = data.filter((resource) => {
-	// 	if (!$selectedTag || $selectedTag === 'all') return resource;
-	// 	if (resource.tags?.some((t)=> t.toLowerCase()  === $selectedTag?.toLowerCase())) return resource;
-	// });
+	// $: if ($searchTerm || $searchTerm !== '') {
+	// 	$searchTerm = $searchTerm;
+	// 	$selectedTag = 'all';
+	// } else {
+	// 	$selectedTag = $selectedTag;
+	// }
 
+	$: filteredResources = data.filter((resource) => {
+		if (!$selectedTag || $selectedTag === 'all') return resource;
+		if (resource.tags?.some((t) => t.toLowerCase() === $selectedTag?.toLowerCase()))
+			return resource;
+	});
 
-	// onMount(() => {
-	// 	const urlParams = new URLSearchParams(window.location.search);
-	// 	const tagFromURL = urlParams.get('tag');
-	//
-	// 	if (tagFromURL) {
-	// 		$selectedTag = tagFromURL;
-	// 	}
-	// });
+	function capitalizeFirstLetter(string: string) {
+		return string.charAt(0).toUpperCase() + string.slice(1);
+	}
 
-	function getUniqueTags(data) {
-		let uniqueTags = [];
-		data.forEach(resource => {
-			resource.tags.forEach(tag => {
-				if (!uniqueTags.includes(tag)) {
-					uniqueTags.push(tag);
+	function getUniqueTags() {
+		let uniqueTags: string[] = [];
+		data.forEach((resource) => {
+			resource.tags.forEach((tag) => {
+				if (!uniqueTags.includes(tag.toLowerCase())) {
+					uniqueTags.push(tag.toLowerCase());
 				}
 			});
 		});
@@ -67,42 +60,52 @@
 <section class="flex flex-col items-center pt-24 pb-24 gap-16 w-full max-w-screen-xl mx-auto">
 	<div class="text-center">
 		<h1 class="text-4xl font-medium leading-tight mt-4">Resources</h1>
-		<h4 class="mt-6 text-lg font-normal leading-relaxed text-gray-300 px-2">The latest industry news, interviews,
-			technologies, and resources.</h4>
+		<h4 class="mt-6 text-lg font-normal leading-relaxed text-gray-300 px-2">
+			The latest industry news, interviews, technologies, and resources.
+		</h4>
 	</div>
 	<div class="flex flex-col px-4 gap-8 w-full md:flex-row md:justify-between">
-		<div data-sveltekit-keepfocus  on:click={() => inputElement.focus()}
-				 class="flex flex-row gap-4 items-center border border-white/30 rounded-2xl shadow-lg p-3 w-full md:w-1/2">
+		<button
+			data-sveltekit-keepfocus
+			on:click={() => inputElement.focus()}
+			class="flex flex-row gap-4 items-center border border-white/30 rounded-2xl shadow-lg p-3 w-full md:w-1/2"
+		>
 			<img class="w-6 h-6" src={search} alt="Welcome" />
 			<input
-				id = "search"
+				id="search"
 				bind:this={inputElement}
 				bind:value={$searchTerm}
 				type="text"
 				placeholder="Search"
 				class="bg-transparent w-full text-gray-200 placeholder-gray-200 focus:outline-none"
 			/>
-		</div>
+		</button>
 		<div class="flex flex-col justify-start items-start lg:flex-row gap-4 lg:items-center">
 			<DropdownMenu.Root>
 				<DropdownMenu.Trigger class="explore-saga-btn text-black px-3 py-2 rounded-xl">
-					{$selectedTag || 'Select Category'}
+					{#if !$selectedTag || $selectedTag === 'all'}
+						Select Category
+					{:else}
+						{$selectedTag}
+					{/if}
 				</DropdownMenu.Trigger>
 				<DropdownMenu.Content class="bg-[#010a23] text-white shadow-lg rounded mt-2">
 					<DropdownMenu.Group>
-						<DropdownMenu.Item on:click={() => $selectedTag = "all"}>
-							<span class="block px-4 py-2">all</span>
+						<DropdownMenu.Item on:click={() => ($selectedTag = 'all')}>
+							<span class="block px-4 py-2">All</span>
 						</DropdownMenu.Item>
-						{#each getUniqueTags(data) as tag}
-							<DropdownMenu.Item on:click={() => $selectedTag = tag}>
-								<span class="block px-4 py-2">{tag}</span>
+						{#each getUniqueTags() as tag}
+							<DropdownMenu.Item on:click={() => ($selectedTag = tag)}>
+								<span
+									class="block px-4
+									py-2">{capitalizeFirstLetter(tag)}</span
+								>
 							</DropdownMenu.Item>
 						{/each}
 					</DropdownMenu.Group>
 				</DropdownMenu.Content>
 			</DropdownMenu.Root>
-			<div
-				class="flex items-center gap-2 border border-white/30 rounded-xl p-3 explore-saga-btn">
+			<div class="flex items-center gap-2 border border-white/30 rounded-xl p-3 explore-saga-btn">
 				<img class="w-6 h-6" src={add} alt="Load" />
 				<button class="text-white text-sm sm:text-md">Submit your project</button>
 			</div>
@@ -128,8 +131,10 @@
 							<!--	</div>-->
 							<!--{/each}-->
 							{#each tags as tag, i}
-								<div class="radial-gradient-bottom border border-white/30 rounded-md px-3 py-2"
-										 style={`--gradient-color:${i % 2 === 1 ? "rgba(110,63,243,0.4)" : 'rgba(242,174,64,0.4)'}`}>
+								<div
+									class="radial-gradient-bottom border border-white/30 rounded-md px-3 py-2"
+									style={`--gradient-color:${i % 2 === 1 ? 'rgba(110,63,243,0.4)' : 'rgba(242,174,64,0.4)'}`}
+								>
 									<h5 class="text-xs text-white">{tag}</h5>
 								</div>
 							{/each}
