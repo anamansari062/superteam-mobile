@@ -18,15 +18,15 @@
 <section class="text-white px-8 md:p-16 md:px-36 rounded-lg xl:pb-32 min-h-screen">
 	<div class="flex flex-row">
 		<div class="max-w-7xl mx-auto">
-			<a href={'/projects'} class="flex items-center mb-4 cursor-pointer">
-				<img src={arrow_left} alt="Back" class="w-6 h-6 mr-2" />
+			<a class="flex items-center mb-4 cursor-pointer" href={'/projects'}>
+				<img alt="Back" class="w-6 h-6 mr-2" src={arrow_left} />
 				<h6 class="text-md md:text-lg font-normal">Back</h6>
 			</a>
 
 			<div class="flex flex-col lg:flex-row items-start gap-8">
 				<img
-					class="w-24 h-24 lg:w-28 lg:h-28 rounded-lg bg-gradient-to-b from-blue-400/10 to-transparent p-3 border border-slate-600"
-					src={sample_logo_1} alt="Project Logo" />
+					alt="Project Logo"
+					class="w-24 h-24 lg:w-28 lg:h-28 rounded-lg bg-gradient-to-b from-blue-400/10 to-transparent p-3 border border-slate-600" src={sample_logo_1} />
 
 				<div class="">
 					<h2 class="text-3xl font-bold mb-2">{data.name}</h2>
@@ -45,22 +45,24 @@
 						</div>
 					</div>
 					<div class="flex flex-row gap-4 justify-start items-end mt-4 lg:hidden">
-						<a href={data.socials.x} target="_blank" rel="noopener noreferrer">
-							<img src={x_logo} alt="X" class="h-6 cursor-pointer" />
+						<a href={data.socials.x} rel="noopener noreferrer" target="_blank">
+							<img alt="X" class="h-6 cursor-pointer" src={x_logo} />
 						</a>
-						<a href={data.socials.discord} target="_blank" rel="noopener noreferrer">
-							<img src={discord_logo} alt="Discord" class="h-6" />
+						<a href={data.socials.discord} rel="noopener noreferrer" target="_blank">
+							<img alt="Discord" class="h-6" src={discord_logo} />
 						</a>
-						<a href={data.socials.github} target="_blank" rel="noopener noreferrer">
-							<img src={github_logo} alt="Github" class="h-6" />
+						<a href={data.socials.github} rel="noopener noreferrer" target="_blank">
+							<img alt="Github" class="h-6" src={github_logo} />
 						</a>
 					</div>
 				</div>
-				<button
-					class="xl:ml-36 lg:mr-24 flex items-center gap-2  rounded-xl px-4 py-2 radial-gradient-blue border border-blue-50/20 transition duration-300">
-					View
-					<img src={external_link} alt="View" class="w-4 h-4 xl:mx-2 md:mr-5" />
-				</button>
+				<a href={data.view} rel="noopener noreferrer" target="_blank">
+					<button
+						class="xl:ml-36 lg:mr-24 flex items-center gap-2  rounded-xl px-4 py-2 radial-gradient-blue border border-blue-50/20 transition duration-300">
+						View
+						<img alt="View" class="w-4 h-4 xl:mx-2 md:mr-5" src={external_link} />
+					</button>
+				</a>
 			</div>
 			<div class="mt-16">
 				<h2 class="text-2xl font-bold mb-2">About {data.name}</h2>
@@ -70,19 +72,19 @@
 			</div>
 		</div>
 		<div class="flex flex-grow items-start flex-row">
-			<img src={line_vertical} alt="Line" class="hidden xl:block mx-6" />
+			<img alt="Line" class="hidden xl:block mx-6" src={line_vertical} />
 			<div class="mt-8 hidden lg:block">
 				<h2 class="text-xl text-center font-semibold mb-2">Links</h2>
 				<div class="flex flex-row gap-4 justify-center items-end ml-2">
-<!--				<div class="flex flex-row gap-4 mx-24 justify-center items-end mt-4 ">-->
-					<a href={data.socials.x} target="_blank" rel="noopener noreferrer">
-						<img src={x_logo} alt="X" class="h-20 cursor-pointer" />
+					<!--				<div class="flex flex-row gap-4 mx-24 justify-center items-end mt-4 ">-->
+					<a href={data.socials.x} rel="noopener noreferrer" target="_blank">
+						<img alt="X" class="h-20 cursor-pointer" src={x_logo} />
 					</a>
-					<a href={data.socials.discord} target="_blank" rel="noopener noreferrer">
-						<img src={discord_logo} alt="Discord" class="h-20 cursor-pointer" />
+					<a href={data.socials.discord} rel="noopener noreferrer" target="_blank">
+						<img alt="Discord" class="h-20 cursor-pointer" src={discord_logo} />
 					</a>
-					<a href={data.socials.github} target="_blank" rel="noopener noreferrer">
-						<img src={github_logo} alt="Github" class="h-20 cursor-pointer" />
+					<a href={data.socials.github} rel="noopener noreferrer" target="_blank">
+						<img alt="Github" class="h-20 cursor-pointer" src={github_logo} />
 					</a>
 				</div>
 			</div>

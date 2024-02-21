@@ -21,11 +21,11 @@
 </svelte:head>
 
 <div class="px-6 sm:px-12 md:px-24">
-	<img class="absolute top-0 left-0 z-10 pointer-events-none hidden sm:flex" src={left_lights} alt="Left Spotlight" />
-	<img class="absolute top-0 right-0 z-10 pointer-events-none hidden sm:flex" src={right_lights} alt="Right Spotlight" />
+	<img class="absolute top-0 left-0 z-10 pointer-events-none flex" src={left_lights} alt="Left Spotlight" />
+	<img class="absolute top-0 right-0 z-10 pointer-events-none flex" src={right_lights} alt="Right Spotlight" />
 
 	<section class="flex flex-col items-center pt-24 pb-24">
-		<div class="flex items-center justify-center gap-2 border border-transparent bg-[linear-gradient(289.83deg,rgba(51,51,51,0.5)-0.09%,rgba(51,51,51,0)39.05%,rgba(51,51,51,0.25)99.93%)] rounded-full py-1 px-4">
+		<div  class="flex items-center justify-center gap-2 border border-transparent test rounded-full py-1 px-4">
 			<h5 class="text-xs md:text-sm text-[#FFFFFFB2]">Get exciting opportunities to earn</h5>
 			<img src={line} alt="Line" class="hidden sm:block" />
 			<a href="https://earn.superteam.fun/" class="text-xs md:text-sm font-bold">Explore Earn</a>
@@ -48,5 +48,9 @@
 <style>
 		.btn {
         cursor: pointer;
+    }
+
+		.test{
+        background: linear-gradient(90deg, rgba(51,51,51,0.5) 0.09%, rgba(51,51,51,0) 39.05%, rgba(51,51,51,0.25) 99.93%);
     }
 </style>
