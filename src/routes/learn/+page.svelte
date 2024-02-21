@@ -19,9 +19,11 @@
 
 	$: console.log('search term', $searchTerm);
 
+	let taggedResources = data;
+
 	let filteredResources = data;
 
-	$: filteredResources = data.filter((resource) => {
+	$: filteredResources = taggedResources.filter((resource) => {
 		if (!$searchTerm || $searchTerm === '') return resource;
 		if (resource.title?.toLowerCase().includes($searchTerm.toLowerCase())) {
 			return resource;
@@ -34,7 +36,7 @@
 	// 	$selectedTag = $selectedTag;
 	// }
 
-	$: filteredResources = data.filter((resource) => {
+	$: taggedResources = data.filter((resource) => {
 		if (!$selectedTag || $selectedTag === 'all') return resource;
 		if (resource.tags?.some((t) => t.toLowerCase() === $selectedTag?.toLowerCase()))
 			return resource;
