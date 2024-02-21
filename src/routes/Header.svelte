@@ -6,7 +6,7 @@
 
 	const navItems = [
 		{ name: 'Home', url: "/" },
-		{ name: 'Resource', url: "/learn" },
+		{ name: 'Resources', url: "/learn" },
 		{ name: 'Projects', url: "/projects" },
 		// { name: 'Earn', url: 'https://earn.superteam.fun/' }
 	];

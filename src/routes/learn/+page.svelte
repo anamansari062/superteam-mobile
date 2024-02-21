@@ -64,8 +64,7 @@
 	<div class="text-center">
 		<h1 class="text-4xl font-medium leading-tight mt-4">Resources</h1>
 		<h4 class="mt-6 text-lg font-normal leading-relaxed text-gray-300 px-2">
-			The latest industry news, interviews, technologies, and resources.
-		</h4>
+			Dive into our comprehensive collection of resources, tailored to support your development journey at every stage.		</h4>
 	</div>
 	<div class="flex flex-col px-4 gap-8 w-full md:flex-row md:justify-between">
 		<button

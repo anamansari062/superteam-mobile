@@ -40,8 +40,7 @@
 	<div class="text-center">
 		<h1 class="text-4xl mt-4">Projects</h1>
 		<h4 class="mt-6 text-md md:text-lg px-4">
-			Powerful for developers. Powering tools and integrations from companies all around the world
-		</h4>
+			Get inspired by a showcase of groundbreaking projects developed by our vibrant community.		</h4>
 	</div>
 	<div class="flex flex-col px-4 gap-8 w-full lg:flex-row md:justify-between">
 		<div class="flex flex-row gap-4 items-center border border-white/30 rounded-2xl shadow-lg p-3 w-full md:w-1/2">
