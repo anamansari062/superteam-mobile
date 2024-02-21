@@ -7,7 +7,7 @@
 	import github_logo from '$lib/images/github_logo.svg';
 </script>
 
-<footer class="flex flex-col justify-center items-center sm:px-20 mt-16 mb-16 w-full relative px-4">
+<footer class="flex flex-col justify-center items-center sm:px-20 mt-16 mb-16 w-full px-4 relative">
 	<div class="flex flex-col sm:flex-row w-full justify-center sm:justify-between items-center gap-8 text-center sm:text-left">
 		<div class="flex flex-col gap-8 items-center sm:items-start">
 			<div class="flex flex-row gap-2 items-center justify-center">
@@ -23,23 +23,33 @@
 						<a href="/learn" class="font-medium  hover:text-white">Learn</a>
 					</li>
 					<li class="relative" aria-current={$page.url.pathname === '/projects' ? 'page' : undefined}>
-						<a href="/projects" class=" font-medium hover:text-white">Build</a>
+						<a href="/projects" class=" font-medium hover:text-white">Resources</a>
 					</li>
-					<li class="relative" aria-current={$page.url.pathname.startsWith('https://earn.superteam.fun') ? 'page' : undefined}>
-						<a href="https://earn.superteam.fun" class="font-medium hover:text-white">Earn</a>
-					</li>
+<!--					<li class="relative" aria-current={$page.url.pathname.startsWith('https://earn.superteam.fun') ? 'page' : undefined}>-->
+<!--						<a href="https://earn.superteam.fun" class="font-medium hover:text-white">Earn</a>-->
+<!--					</li>-->
 				</ul>
 			</nav>
 		</div>
 		<div class="flex flex-col gap-16 justify-between items-center md:items-end">
 			<div class="w-36 h-12 flex items-center justify-center">
-				<button class="text-white text-sm font-medium explore-saga-btn">Explore Saga</button>
+				<a href="https://solanamobile.com/hardware">
+					<button class="text-white text-sm font-medium explore-saga-btn">Explore Saga</button>
+				</a>
 			</div>
 			<div class="flex flex-row gap-4 justify-center">
-				<img src={x_logo} alt="X" class="h-6" />
-				<img src={discord_logo} alt="Discord" class="h-6" />
-				<img src={mail_logo} alt="Mail" class="h-6" />
-				<img src={github_logo} alt="Github" class="h-6" />
+				<a href="https://twitter.com/superteamearn">
+					<img src={x_logo} alt="X" class="h-6"  />
+				</a>
+				<a href="https://discord.com/invite/Mq3ReaekgG" >
+					<img src={discord_logo} alt="Discord" class="h-6" />
+				</a>
+				<a href="/">
+					<img src={mail_logo} alt="Mail" class="h-6" />
+				</a>
+				<a href="https://github.com/SuperteamDAO">
+					<img src={github_logo} alt="Github" class="h-6" />
+				</a>
 			</div>
 		</div>
 	</div>

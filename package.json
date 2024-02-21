@@ -38,5 +38,17 @@
 		"vite": "^5.0.3",
 		"vitest": "^1.2.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@popperjs/core": "^2.11.8",
+		"bits-ui": "^0.18.1",
+		"clsx": "^2.1.0",
+		"flowbite": "^2.3.0",
+		"flowbite-svelte": "^0.44.23",
+		"lucide-svelte": "^0.334.0",
+		"svelte-routing": "^2.12.0",
+		"sveltekit-search-params": "^2.1.1",
+		"tailwind-merge": "^2.2.1",
+		"tailwind-variants": "^0.2.0"
+	}
 }
