@@ -21,15 +21,15 @@
 </svelte:head>
 
 <div class="px-6 sm:px-12 md:px-24">
-	<img class="absolute top-0 left-0 z-10 pointer-events-none flex" src={left_lights} alt="Left Spotlight" />
-	<img class="absolute top-0 right-0 z-10 pointer-events-none flex" src={right_lights} alt="Right Spotlight" />
+	<img class="absolute top-0 left-0 z-10 pointer-events-none hidden sm:flex" src={left_lights} alt="Left Spotlight" />
+	<img class="absolute top-0 right-0 z-10 pointer-events-none hidden sm:flex" src={right_lights} alt="Right Spotlight" />
 
-	<section class="flex flex-col items-center pt-24 pb-24">
+	<section class="flex flex-col items-center pt-24 pb-24 ">
 		<div  class="flex items-center justify-center gap-2 border border-transparent test rounded-full py-1 px-4">
 			<h5 class="text-xs md:text-sm text-[#FFFFFFB2]">Get exciting opportunities to earn</h5>
 			<img src={line} alt="Line" class="hidden sm:block" />
 			<a href="https://earn.superteam.fun/" class="text-xs md:text-sm font-bold">Explore Earn</a>
-			<img src={arrow} alt="Go" class="w-4 h-4" />
+			<a href="https://earn.superteam.fun/" ><img src={arrow} alt="Go" class="w-4 h-4" /></a>
 		</div>
 		<h1 class="mt-4 text-3xl lg:text-6xl font-medium text-center">All things Mobile</h1>
 		<h4 class="mt-6 text-sm lg:text-xl text-center">find resources, ideas, and projects related to mobile-based Solana development.</h4>

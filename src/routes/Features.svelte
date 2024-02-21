@@ -78,7 +78,7 @@
 >
 	<div class="relative searchBar w-72 sm:w-full">
 		<img
-			class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full"
+			class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full hidden sm:flex"
 			src={ellipse}
 			alt="Star bg"
 		/>

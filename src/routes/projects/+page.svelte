@@ -38,7 +38,7 @@
 
 <section class="flex flex-col pt-24 xl:pb-64 pb-24 w-full max-w-6xl mx-auto gap-16">
 	<div class="text-center">
-		<h1 class="text-4xl mt-4">Projects</h1>
+		<h1 class="text-4xl mt-4 font-semibold">Projects</h1>
 		<h4 class="mt-6 text-md md:text-lg px-4">
 			Get inspired by a showcase of groundbreaking projects developed by our vibrant community.		</h4>
 	</div>
