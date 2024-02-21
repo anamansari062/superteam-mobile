@@ -7,6 +7,7 @@
 	import sample_resource from '$lib/images/sample_resource.png';
 	import add from '$lib/images/add.svg';
 	import data from './data.json';
+	// import mobile from '$lib/images/mobile.png'
 	// import { navigate } from 'svelte-routing';
 	// import { onMount } from 'svelte';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
@@ -109,15 +110,15 @@
 			</DropdownMenu.Root>
 			<div class="flex items-center gap-2 border border-white/30 rounded-xl p-3 explore-saga-btn">
 				<img class="w-6 h-6" src={add} alt="Load" />
-				<button class="text-white text-sm sm:text-md">Submit your project</button>
+				<button class="text-white text-sm sm:text-md">Submit a Resource</button>
 			</div>
 		</div>
 	</div>
 	<div class="grid grid-cols-1 gap-8 px-4 sm:grid-cols-2 lg:grid-cols-3">
-		{#each filteredResources as { title, description, tags }, i}
+		{#each filteredResources as { title, description, tags }}
 			<div class="flex flex-col border border-white/30 rounded-xl overflow-hidden">
 				<img class="w-full h-56 object-cover" src={sample_resource} alt="Sample Resource" />
-				<div class="flex flex-col w-full p-6 gap-2 bg-black/30 backdrop-blur-sm">
+				<div class="flex flex-col w-full p-6 gap-2 backdrop-blur-lg bg-gradient-to-b from-gray-400/10 to-transparent/20">
 					<h2 class="text-xl font-medium">{title}</h2>
 					<h3 class="text-gray-200">{description}</h3>
 					<div class="flex lg:flex-row flex-col gap-4 mt-4 justify-between items-start">

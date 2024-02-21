@@ -7,7 +7,7 @@
 	import github_logo from '$lib/images/github_logo.svg';
 </script>
 
-<footer class="flex flex-col justify-center items-center sm:px-20 mt-16 mb-16 w-full relative px-4">
+<footer class="flex flex-col justify-center items-center sm:px-20 mt-16 mb-16 w-full px-4 relative">
 	<div class="flex flex-col sm:flex-row w-full justify-center sm:justify-between items-center gap-8 text-center sm:text-left">
 		<div class="flex flex-col gap-8 items-center sm:items-start">
 			<div class="flex flex-row gap-2 items-center justify-center">

@@ -28,9 +28,9 @@
 	// 	navigate(`/learn?tag=${selectedTag}`);
 	// }
 	const features_block1 = [
-		{ id: 1, logo: sms_logo, title: 'SMS', subtitle: 'Solana Mobile Stack', tags: 'SMS' },
-		{ id: 2, logo: pwa_logo, title: 'PWAs', subtitle: 'Progressive Web Apps', tags: 'SMS' },
-		{ id: 3, logo: sdk_logo, title: 'SDKs', subtitle: 'Accelerate Development', tags: 'SMS' }
+		{ id: 1, logo: sms_logo, title: 'SMS', subtitle: 'Solana Mobile Stack', tag: 'SMS' },
+		{ id: 2, logo: pwa_logo, title: 'PWAs', subtitle: 'Progressive Web Apps', tag: 'PWA' },
+		{ id: 3, logo: sdk_logo, title: 'SDKs', subtitle: 'Accelerate Development', tag: 'SDK' }
 	];
 
 	const features_block2 = [
@@ -65,10 +65,10 @@
 	];
 
 	const additionalFeaturesBlock1 = [
-		{ id: 4, logo: kotlin, title: 'Kotlin', subtitle: '', tags: 'Kotlin' },
-		{ id: 5, logo: flutter, title: 'Flutter', subtitle: '', tags: 'Flutter' },
-		{ id: 6, logo: react_native, title: 'React Native', subtitle: '', tags: 'React Native' },
-		{ id: 7, logo: swift, title: 'Swift', subtitle: '', tags: 'Swift' }
+		{ id: 4, logo: kotlin, title: 'Kotlin', subtitle: '', tag: 'Kotlin' },
+		{ id: 5, logo: flutter, title: 'Flutter', subtitle: '', tag: 'Flutter' },
+		{ id: 6, logo: react_native, title: 'React Native', subtitle: '', tag: 'React Native' },
+		{ id: 7, logo: swift, title: 'Swift', subtitle: '', tag: 'Swift' }
 	];
 </script>
 
@@ -78,7 +78,7 @@
 >
 	<div class="relative searchBar w-72 sm:w-full">
 		<img
-			class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full"
+			class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full hidden md:flex"
 			src={ellipse}
 			alt="Star bg"
 		/>
@@ -99,8 +99,8 @@
 				<img class="sm:mt-5 arrow_right hidden xl:block" src={right_arrow} alt="Right Arrow" />
 			</div>
 			<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-12">
-				{#each features_block1 as { logo, title, subtitle, tags }}
-					<a href={`learn/?tag=${title.toLowerCase()}`} class="block featureCard">
+				{#each features_block1 as { logo, title, subtitle, tag }}
+					<a href={`learn/?tag=${tag.toLowerCase()}`} class="block featureCard">
 						<img class="logo" src={logo} alt={title} />
 						<div class="gap-8 mt-6">
 							<div class="text-xl md:text-2xl font-semibold">{title}</div>
@@ -112,19 +112,21 @@
 					<div
 						class="grid grid-cols-2 justify-center items-center place-content-center gap-4 sm:gap-4"
 					>
-						{#each additionalFeaturesBlock1 as { id, logo, title, tags }}
-							<div
-								class="featureCardLogo border p-1 rounded-lg flex-col cursor-pointer additionalFeaturesBlock1"
-							>
-								<img class="logo mx-auto scale-75" src={logo} alt={title} />
-							</div>
+						{#each additionalFeaturesBlock1 as { logo, title, tag }}
+							<a href={`learn/?tag=${tag.toLowerCase()}`}>
+								<div
+									class="featureCardLogo border p-1 rounded-lg flex-col cursor-pointer additionalFeaturesBlock1"
+								>
+									<img class="logo mx-auto scale-75" src={logo} alt={title} />
+								</div>
+							</a>
 						{/each}
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- Line Divider -->
-		<div class="h-full hidden lg:block">
+		<div class="h-full hidden xl:block">
 			<img
 				class="h-full xl:h-[540px] xl:w-3 xl:mt-8 w-full"
 				src={line_features}

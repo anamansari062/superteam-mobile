@@ -70,19 +70,19 @@
 			</div>
 		</div>
 		<div class="flex flex-grow items-start flex-row">
-			<img src={line_vertical} alt="Line" class="hidden xl:block mx-4" />
+			<img src={line_vertical} alt="Line" class="hidden xl:block mx-6" />
 			<div class="mt-8 hidden lg:block">
 				<h2 class="text-xl text-center font-semibold mb-2">Links</h2>
-				<div class="flex flex-row gap-4 justify-center items-end">
+				<div class="flex flex-row gap-4 justify-center items-end ml-2">
 <!--				<div class="flex flex-row gap-4 mx-24 justify-center items-end mt-4 ">-->
 					<a href={data.socials.x} target="_blank" rel="noopener noreferrer">
-						<img src={x_logo} alt="X" class="h-24 cursor-pointer" />
+						<img src={x_logo} alt="X" class="h-20 cursor-pointer" />
 					</a>
 					<a href={data.socials.discord} target="_blank" rel="noopener noreferrer">
-						<img src={discord_logo} alt="Discord" class="h-24 cursor-pointer" />
+						<img src={discord_logo} alt="Discord" class="h-20 cursor-pointer" />
 					</a>
 					<a href={data.socials.github} target="_blank" rel="noopener noreferrer">
-						<img src={github_logo} alt="Github" class="h-24 cursor-pointer" />
+						<img src={github_logo} alt="Github" class="h-20 cursor-pointer" />
 					</a>
 				</div>
 			</div>
