@@ -17,6 +17,17 @@
 	import react_native from '$lib/images/react-native.png';
 	import swift from '$lib/images/swift.png';
 
+
+	import { navigate } from 'svelte-routing';
+
+	let selectedCategory = '';
+
+	function handleComponentClick(tags) {
+		selectedCategory = tags;
+		console.log('Selected Category:', selectedTag);
+
+		navigate(`/learn?tag=${selectedTag}`);
+	}
 	const features_block1 = [
 		{ id: 1, logo: sms_logo, title: 'SMS', subtitle: 'Solana Mobile Stack', tags: ['Saganize', 'SMS']},
 		{ id: 2, logo: pwa_logo, title: 'PWAs', subtitle: 'Progressive Web Apps', tags: ['Saganize', 'SMS'] },
@@ -70,8 +81,8 @@
 				{/each}
 				<div class="w-full flex flex-col">
 					<div class="grid grid-cols-2 justify-center items-center place-content-center gap-4 sm:gap-4">
-						{#each additionalFeaturesBlock1 as { logo, title,tags }}
-							<div class="featureCardLogo border p-1 rounded-lg flex-col additionalFeaturesBlock1">
+						{#each additionalFeaturesBlock1 as { id, logo, title, tags }}
+							<div class="featureCardLogo border p-1 rounded-lg flex-col cursor-pointer additionalFeaturesBlock1">
 								<img class="logo mx-auto scale-75" src={logo} alt={title} />
 							</div>
 						{/each}

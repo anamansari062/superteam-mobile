@@ -1,23 +1,55 @@
-<script>
+<script lang="ts">
 	// import { onMount } from 'svelte';
 	import search from '$lib/images/search.svg';
-	import down_arrow from '$lib/images/down_arrow.svg';
+	// import down_arrow from '$lib/images/down_arrow.svg';
 	import arrow_up_right from '$lib/images/arrow-up-right.svg';
 	// import reload from '$lib/images/reload.svg';
 	import sample_resource from '$lib/images/sample_resource.png';
 	import add from '$lib/images/add.svg';
 	import data from './data.json';
+	// import { navigate } from 'svelte-routing';
+	// import { onMount } from 'svelte';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
+	import { queryParam } from 'sveltekit-search-params';
 
-	let searchTerm = '';
+	let selectedTag = queryParam('tag');
+	let searchTerm = queryParam('query');
+
+	let inputElement: HTMLInputElement;
+
+
+	$:console.log("search term", $searchTerm)
+
 	let filteredResources = data;
 
-	let selectedTag = '';
+	// $: filteredResources = data.filter(resource =>
+	// 	resource.title.toLowerCase().includes($searchTerm?.toLowerCase() ?? '') &&
+	// 	($selectedTag === '' || resource.tags.includes($selectedTag ?? ''))
+	// );
 
-	$: filteredResources = data.filter(resource =>
-		resource.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
-		(selectedTag === '' || resource.tags.includes(selectedTag))
-	);
+	$: filteredResources = data.filter((resource) => {
+		if (!$searchTerm || $searchTerm === '') return resource;
+		if (
+			resource.title?.toLowerCase().includes($searchTerm.toLowerCase())
+		) {
+			$selectedTag = 'all';
+			return resource;
+		}
+	});
+	// $: filteredResources = data.filter((resource) => {
+	// 	if (!$selectedTag || $selectedTag === 'all') return resource;
+	// 	if (resource.tags?.some((t)=> t.toLowerCase()  === $selectedTag?.toLowerCase())) return resource;
+	// });
+
+
+	// onMount(() => {
+	// 	const urlParams = new URLSearchParams(window.location.search);
+	// 	const tagFromURL = urlParams.get('tag');
+	//
+	// 	if (tagFromURL) {
+	// 		$selectedTag = tagFromURL;
+	// 	}
+	// });
 
 	function getUniqueTags(data) {
 		let uniqueTags = [];
@@ -39,10 +71,13 @@
 			technologies, and resources.</h4>
 	</div>
 	<div class="flex flex-col px-4 gap-8 w-full md:flex-row md:justify-between">
-		<div class="flex flex-row gap-4 items-center border border-white/30 rounded-2xl shadow-lg p-3 w-full md:w-1/2">
+		<div data-sveltekit-keepfocus  on:click={() => inputElement.focus()}
+				 class="flex flex-row gap-4 items-center border border-white/30 rounded-2xl shadow-lg p-3 w-full md:w-1/2">
 			<img class="w-6 h-6" src={search} alt="Welcome" />
 			<input
-				bind:value={searchTerm}
+				id = "search"
+				bind:this={inputElement}
+				bind:value={$searchTerm}
 				type="text"
 				placeholder="Search"
 				class="bg-transparent w-full text-gray-200 placeholder-gray-200 focus:outline-none"
@@ -51,12 +86,15 @@
 		<div class="flex flex-col justify-start items-start lg:flex-row gap-4 lg:items-center">
 			<DropdownMenu.Root>
 				<DropdownMenu.Trigger class="explore-saga-btn text-black px-3 py-2 rounded-xl">
-					{selectedTag || 'Select Category'}
+					{$selectedTag || 'Select Category'}
 				</DropdownMenu.Trigger>
 				<DropdownMenu.Content class="bg-[#010a23] text-white shadow-lg rounded mt-2">
 					<DropdownMenu.Group>
+						<DropdownMenu.Item on:click={() => $selectedTag = "all"}>
+							<span class="block px-4 py-2">all</span>
+						</DropdownMenu.Item>
 						{#each getUniqueTags(data) as tag}
-							<DropdownMenu.Item on:click={() => selectedTag = tag}>
+							<DropdownMenu.Item on:click={() => $selectedTag = tag}>
 								<span class="block px-4 py-2">{tag}</span>
 							</DropdownMenu.Item>
 						{/each}
@@ -71,7 +109,7 @@
 		</div>
 	</div>
 	<div class="grid grid-cols-1 gap-8 px-4 sm:grid-cols-2 lg:grid-cols-3">
-		{#each filteredResources as { title, description, viewLink, tags }, i}
+		{#each filteredResources as { title, description, tags }, i}
 			<div class="flex flex-col border border-white/30 rounded-xl overflow-hidden">
 				<img class="w-full h-56 object-cover" src={sample_resource} alt="Sample Resource" />
 				<div class="flex flex-col w-full p-6 gap-2 bg-black/30 backdrop-blur-sm">
