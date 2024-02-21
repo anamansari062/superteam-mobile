@@ -74,7 +74,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-2 w-full">
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-8 w-full">
 		{#each filteredResources as choice}
 			<div
 				class="flex flex-col lg:flex-row gap-4 border border-gray-400/40 rounded-lg p-4 bg-[rgb(2,10,35)] cursor-pointer"
