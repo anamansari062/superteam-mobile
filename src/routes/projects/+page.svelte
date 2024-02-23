@@ -89,7 +89,7 @@
 					<a href={`/projects/${choice.slug}`} class="text-lg md:text-xl text-white">{choice.name}</a>
 <!--					<h3 class="text-sm text-gray-300">{choice.description}</h3>-->
 					<div class="description-container">
-						<h3 class="text-gray-200 text-base w-64 md:w-76 xl:w-96 overflow-hidden" style="max-height: {!expandedStates[choice.slug] ? '24' : '9999'}px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: {!expandedStates[choice.slug] ? '2' : 'unset'}; -webkit-box-orient: vertical;">
+						<h3 class="text-gray-200 text-base sm:w-80 md:w-72 xl:w-96 overflow-hidden" style="max-height: {!expandedStates[choice.slug] ? '24' : '9999'}px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: {!expandedStates[choice.slug] ? '2' : 'unset'}; -webkit-box-orient: vertical;">
 							{choice.description}
 						</h3>
 						{#if !expandedStates[choice.slug]}
