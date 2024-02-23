@@ -4,14 +4,9 @@
 	import sample_logo_1 from '$lib/images/sample_logo_1.png';
 	import arrow_left from '$lib/images/arrow-left.svg';
 	import external_link from '$lib/images/external-link.svg';
-	// import { goto } from '$app/navigation';
 	import x_logo from '$lib/images/x_logo.svg';
 	import discord_logo from '$lib/images/discord_logo.svg';
 	import github_logo from '$lib/images/github_logo.svg';
-	// function handleClick() {
-	//
-	// 	goto('/projects');
-	// }
 	export let data;
 </script>
 
@@ -74,17 +69,16 @@
 		<div class="flex flex-grow items-start flex-row">
 			<img alt="Line" class="hidden xl:block mx-6" src={line_vertical} />
 			<div class="mt-8 hidden lg:block">
-				<h2 class="text-xl ml-2">Links</h2>
-				<div class="flex flex-row -mt-5 gap-4 justify-center items-end ml-2">
-					<!--				<div class="flex flex-row gap-4 mx-24 justify-center items-end mt-4 ">-->
+				<h2 class="text-xl 2xl:text-2xl font-medium ml-2">Links</h2>
+				<div class="flex flex-row -mt-5 2xl:mt-5 gap-4 justify-center items-end ml-2">
 					<a href={data.socials.x} rel="noopener noreferrer" target="_blank">
-						<img alt="X" class="h-20 cursor-pointer" src={x_logo} />
+						<img alt="X" class="h-20 md:h-24 2xl:h-12 cursor-pointer" src={x_logo} />
 					</a>
 					<a href={data.socials.discord} rel="noopener noreferrer" target="_blank">
-						<img alt="Discord" class="h-20 cursor-pointer" src={discord_logo} />
+						<img alt="Discord" class="h-20 md:h-24 2xl:h-12 cursor-pointer" src={discord_logo} />
 					</a>
 					<a href={data.socials.github} rel="noopener noreferrer" target="_blank">
-						<img alt="Github" class="h-20 cursor-pointer" src={github_logo} />
+						<img alt="Github" class="h-20 md:h-24 2xl:h-12 cursor-pointer" src={github_logo} />
 					</a>
 				</div>
 			</div>
