@@ -2,7 +2,7 @@ const projects  =[
 	{
 		"name": "Mirror World Smart SDK",
 		slug: "mirror-world-smart-sdk1",
-		"description": "A Web3 infrastructure project aiming to help developers...",
+		"description": "Helium is a decentralized machine network that enables devices anywhere in the world to wirelessly connect to the internet and geolocate themselves without",
 		"tags": ["TOOLING", "CANDY PAY"],
 		"logo": "sample_logo",
 		"view": "https://www.mirrorworld.io",

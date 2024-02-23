@@ -1,17 +1,16 @@
 <script lang="ts">
-	// import { onMount } from 'svelte';
 	import search from '$lib/images/search.svg';
-	// import down_arrow from '$lib/images/down_arrow.svg';
 	import arrow_up_right from '$lib/images/arrow-up-right.svg';
-	// import reload from '$lib/images/reload.svg';
-	import sample_resource from '$lib/images/sample_resource.png';
 	import add from '$lib/images/add.svg';
 	import data from './data.json';
-	// import mobile from '$lib/images/mobile.png'
-	// import { navigate } from 'svelte-routing';
-	// import { onMount } from 'svelte';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
 	import { queryParam } from 'sveltekit-search-params';
+
+	let expandedStates: Record<string, boolean> = {};
+
+	function toggleDescription(cardTitle: string) {
+		expandedStates[cardTitle] = !expandedStates[cardTitle];
+	}
 
 	let selectedTag = queryParam('tag');
 	let searchTerm = queryParam('query');
@@ -30,12 +29,7 @@
 			return resource;
 		}
 	});
-	// $: if ($searchTerm || $searchTerm !== '') {
-	// 	$searchTerm = $searchTerm;
-	// 	$selectedTag = 'all';
-	// } else {
-	// 	$selectedTag = $selectedTag;
-	// }
+
 
 	$: taggedResources = data.filter((resource) => {
 		if (!$selectedTag || $selectedTag === 'all') return resource;
@@ -58,6 +52,7 @@
 		});
 		return uniqueTags;
 	}
+
 </script>
 
 <section class="flex flex-col items-center pt-24 pb-24 gap-16 w-full max-w-screen-xl mx-auto">
@@ -114,24 +109,27 @@
 		</div>
 	</div>
 	<div class="grid grid-cols-1 gap-8 px-4 sm:grid-cols-2 lg:grid-cols-3">
-		{#each filteredResources as { title, description, tags }}
+		{#each filteredResources as { title, description, tags, image }}
 			<div class="flex flex-col border border-white/30 rounded-xl overflow-hidden">
-				<img class="w-full h-56 object-cover" src={sample_resource} alt="Sample Resource" />
+				<img class="w-full h-56 object-cover" src={image} alt="Sample Resource" />
 				<div class="flex flex-col w-full p-6 gap-2 backdrop-blur-lg bg-gradient-to-b from-gray-400/10 to-transparent/20">
 					<h2 class="text-xl font-medium">{title}</h2>
-					<h3 class="text-gray-200">{description}</h3>
+					<div class="description-container">
+						<h3 class="text-gray-200" style="max-height: {!expandedStates[title] ? '3' : '9999'}em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: {!expandedStates[title] ? '2' : 'unset'}; -webkit-box-orient: vertical;">
+							{description}
+						</h3>
+						{#if !expandedStates[title]}
+							<button on:click={() => toggleDescription(title)} class="text-blue-400 hover:underline text-sm mt-2">Show More</button>
+						{:else}
+							<button on:click={() => toggleDescription(title)} class="text-blue-400 hover:underline text-sm mt-2">Show Less</button>
+						{/if}
+					</div>
 					<div class="flex lg:flex-row flex-col gap-4 mt-4 justify-between items-start">
 						<button class="flex flex-row gap-1 items-center text-blue-400">
 							<h6 class="text-white hover:text-blue-500 text-sm xl:text-lg">View</h6>
 							<img src={arrow_up_right} alt="View" class="sm:w-5 sm:h-5" />
 						</button>
 						<div class="flex flex-row gap-2 text-center">
-							<!--{#each tags as tag}-->
-							<!--	<div-->
-							<!--		class="radial-gradient-bottom flex-grow border text-center flex items-center justify-center border-white/30 rounded-lg px-3 py-2 w-fit">-->
-							<!--		<div class="text-xs font-medium">{tag}</div>-->
-							<!--	</div>-->
-							<!--{/each}-->
 							{#each tags as tag, i}
 								<div
 									class="radial-gradient-bottom border border-white/30 rounded-md px-3 py-2"

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import search from '$lib/images/search.svg';
 	import add from '$lib/images/add.svg';
 
@@ -9,9 +9,11 @@
 
 	export let data;
 
-	// function handleClick() {
-	// 	goto('/project');
-	// }
+	let expandedStates: Record<string, boolean> = {};
+
+	function toggleDescription(slug: string) {
+		expandedStates[slug] = !expandedStates[slug];
+	}
 
 	let searchTerm = '';
 	let filteredResources = data.items;
@@ -80,12 +82,22 @@
 				class="flex flex-col lg:flex-row gap-4 border border-gray-400/40 rounded-lg p-4 bg-[rgb(2,10,35)] cursor-pointer"
 				aria-hidden="true" aria-label="View more about this project">
 				<div
-					class="w-24 h-24 p-4 bg-gradient-to-b from-blue-200/10 to-transparent border border-gray-400/40 rounded-md flex justify-center items-center">
-					<img class="w-16 h-16" src={sample_logo} alt="Project Logo" />
+					class="w-24 h-24 p-4 overflow-hidden bg-gradient-to-b from-blue-200/10 to-transparent border border-gray-400/40 rounded-md flex justify-center items-center"	>
+					<img class="w-auto h-16" src={sample_logo} alt="Project Logo" />
 				</div>
 				<div class="flex flex-col gap-2">
 					<a href={`/projects/${choice.slug}`} class="text-lg md:text-xl text-white">{choice.name}</a>
-					<h3 class="text-sm text-gray-300">{choice.description}</h3>
+<!--					<h3 class="text-sm text-gray-300">{choice.description}</h3>-->
+					<div class="description-container">
+						<h3 class="text-gray-200 text-base w-64 md:w-76 xl:w-96 overflow-hidden" style="max-height: {!expandedStates[choice.slug] ? '24' : '9999'}px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: {!expandedStates[choice.slug] ? '2' : 'unset'}; -webkit-box-orient: vertical;">
+							{choice.description}
+						</h3>
+						{#if !expandedStates[choice.slug]}
+							<button on:click={() => toggleDescription(choice.slug)} class="text-blue-400 hover:underline text-sm mt-2">Show More</button>
+						{:else}
+							<button on:click={() => toggleDescription(choice.slug)} class="text-blue-400 hover:underline text-sm mt-2">Show Less</button>
+						{/if}
+					</div>
 					<div class="flex flex-row gap-2">
 						{#each choice.tags as tag, i}
 							<div class="radial-gradient-bottom border border-white/30 rounded-md px-3 py-1"

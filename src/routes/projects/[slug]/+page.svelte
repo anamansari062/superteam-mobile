@@ -74,8 +74,8 @@
 		<div class="flex flex-grow items-start flex-row">
 			<img alt="Line" class="hidden xl:block mx-6" src={line_vertical} />
 			<div class="mt-8 hidden lg:block">
-				<h2 class="text-xl text-center font-semibold mb-2">Links</h2>
-				<div class="flex flex-row gap-4 justify-center items-end ml-2">
+				<h2 class="text-xl ml-2">Links</h2>
+				<div class="flex flex-row -mt-5 gap-4 justify-center items-end ml-2">
 					<!--				<div class="flex flex-row gap-4 mx-24 justify-center items-end mt-4 ">-->
 					<a href={data.socials.x} rel="noopener noreferrer" target="_blank">
 						<img alt="X" class="h-20 cursor-pointer" src={x_logo} />
