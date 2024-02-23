@@ -110,9 +110,9 @@
 	</div>
 	<div class="grid grid-cols-1 gap-8 px-4 sm:grid-cols-2 lg:grid-cols-3">
 		{#each filteredResources as { title, description, tags, image }}
-			<div class="flex flex-col border border-white/30 rounded-xl overflow-hidden">
-				<img class="w-full h-56 object-cover" src={image} alt="Sample Resource" />
-				<div class="flex flex-col w-full p-6 gap-2 backdrop-blur-lg bg-gradient-to-b from-gray-400/10 to-transparent/20">
+			<div class="flex flex-col border border-white/30 rounded-xl overflow-hidden backdrop-blur-lg bg-gradient-to-b from-gray-400/10 to-transparent/20">
+				<img class="w-full h-56 object-fit" src={image} alt={title} />
+				<div class="flex flex-col w-full p-6 gap-2">
 					<h2 class="text-xl font-medium">{title}</h2>
 					<div class="description-container">
 						<h3 class="text-gray-200" style="max-height: {!expandedStates[title] ? '3' : '9999'}em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: {!expandedStates[title] ? '2' : 'unset'}; -webkit-box-orient: vertical;">
@@ -126,10 +126,10 @@
 					</div>
 					<div class="flex lg:flex-row flex-col gap-4 mt-4 justify-between items-start">
 						<button class="flex flex-row gap-1 items-center text-blue-400">
-							<h6 class="text-white hover:text-blue-500 text-sm xl:text-lg">View</h6>
-							<img src={arrow_up_right} alt="View" class="sm:w-5 sm:h-5" />
+							<h6 class="text-white hover:text-blue-500 text-sm xl:text-md">View</h6>
+							<img src={arrow_up_right} alt="View" class="sm:w-4 sm:h-4" />
 						</button>
-						<div class="flex flex-row gap-2 text-center">
+						<div class="flex gap-2 text-center flex-row flex-wrap">
 							{#each tags as tag, i}
 								<div
 									class="radial-gradient-bottom border border-white/30 rounded-md px-3 py-2"

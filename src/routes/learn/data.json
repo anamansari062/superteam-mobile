@@ -3,14 +3,14 @@
   "description": "Let's embark on an exciting journey into the realm of the Solana Mobile Stack (SMS). Together, we'll craft an Android Application that incorporates the Mobile Wallet Adapter from the SMS. Even if you've just made a simple to-do list Android app, you're good to go!",
   "viewLink": "https://anamansari062.hashnode.dev/building-a-decentralized-mobile-application-on-solana",
   "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1696922045697/d462db25-2873-4ba5-a8b9-431e5c033133.webp?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp",
-  "tags": ["SMS", "KOTLIN"]
+  "tags": ["SMS", "KOTLIN", "SAGA", "ANDROID"]
 },
   {
     "title": "Solana Mobile Development Ecosystem",
     "description": "Welcome !! In this article we gonna discuss in depth about the Solana Mobile Stack and Saga but …",
     "viewLink": "https://noisy-crime-30a.notion.site/Solana-Mobile-Development-Ecosystem-f21bc41ac5314b6096e5cf9076c252d1?pvs=4",
     "image": "https://noisy-crime-30a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F1ab94e20-47e0-4606-854f-0d836f237e2e%2F000440a0-603f-4182-b8d5-ec7e55749961%2FUntitled.png?table=block&id=714f9ffe-22a7-4425-b964-ce553c4c30e7&spaceId=1ab94e20-47e0-4606-854f-0d836f237e2e&width=2000&userId=&cache=v2",
-    "tags": ["SMS", "SAGA"]
+    "tags": ["SMS", "SAGA", "ANDROID", "IOS"]
   },
   {
     "title": "Technical Deep Dive: Building Mobile Apps on Solana",
