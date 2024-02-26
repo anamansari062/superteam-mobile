@@ -26,7 +26,7 @@
 				<div class="">
 					<h2 class="text-3xl font-bold mb-2">{data.name}</h2>
 					<p class="text-gray-400 mb-4">
-						{data.sub_title}
+						{data.tagline}
 					</p>
 
 					<div class="flex flex-wrap gap-2 md:mb-4">
@@ -62,7 +62,7 @@
 			<div class="mt-16">
 				<h2 class="text-2xl font-bold mb-2">About {data.name}</h2>
 				<p class="text-gray-400 md:pr-24 lg:text-justify">
-					{data.post_description}
+					{data.about}
 				</p>
 			</div>
 		</div>

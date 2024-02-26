@@ -90,7 +90,7 @@
 <!--					<h3 class="text-sm text-gray-300">{choice.description}</h3>-->
 					<div class="description-container">
 						<h3 class="text-gray-200 text-base sm:w-80 md:w-72 xl:w-96 overflow-hidden" style="max-height: {!expandedStates[choice.slug] ? '24' : '9999'}px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: {!expandedStates[choice.slug] ? '2' : 'unset'}; -webkit-box-orient: vertical;">
-							{choice.description}
+							{choice.tagline}
 						</h3>
 						{#if !expandedStates[choice.slug]}
 							<button on:click={() => toggleDescription(choice.slug)} class="text-blue-400 hover:underline text-sm mt-2">Show More</button>

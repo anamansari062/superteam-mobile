@@ -8,8 +8,8 @@ export function load({params}) {
 	return {
 		name:project.name,
 		post_name: project.post_name,
-		sub_title: project.sub_title,
-		post_description: project.post_description,
+		tagline: project.tagline,
+		about: project.about,
 		tags: project.tags,
 		socials: project.socials,
 		view: project.view
