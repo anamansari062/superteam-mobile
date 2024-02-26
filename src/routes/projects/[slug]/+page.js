@@ -7,11 +7,11 @@ export function load({params}) {
 	}
 	return {
 		name:project.name,
-		post_name: project.post_name,
 		tagline: project.tagline,
 		about: project.about,
 		tags: project.tags,
 		socials: project.socials,
-		view: project.view
+		view: project.view,
+		logo: project.logo
 	}
 }

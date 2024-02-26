@@ -83,7 +83,7 @@
 				aria-hidden="true" aria-label="View more about this project">
 				<div
 					class="flex items-center justify-center w-24 h-24 p-4 overflow-hidden border rounded-md bg-gradient-to-b from-blue-200/10 to-transparent border-gray-400/40"	>
-					<img class="w-auto h-16" src={sample_logo} alt="Project Logo" />
+					<img class="w-auto h-16" src={choice.logo} alt="Project Logo" />
 				</div>
 				<div class="flex flex-col gap-2">
 					<a href={`/projects/${choice.slug}`} class="text-lg text-white md:text-xl">{choice.name}</a>
