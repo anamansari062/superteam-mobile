@@ -42,16 +42,16 @@
 	<div class="text-center">
 		<h1 class="mt-4 text-4xl font-semibold">Projects</h1>
 		<h4 class="px-4 mt-6 text-md md:text-lg">
-			Get inspired by a showcase of groundbreaking projects developed by our vibrant community.		</h4>
+			Get inspired by a showcase of groundbreaking projects developed by our vibrant community. </h4>
 	</div>
 	<div class="flex flex-col w-full gap-8 px-4 lg:flex-row md:justify-between">
 		<div class="flex flex-row items-center w-full gap-4 p-3 border shadow-lg border-white/30 rounded-2xl md:w-1/2">
-			<img class="w-6 h-6" src={search} alt="Welcome" />
+			<img alt="Welcome" class="w-6 h-6" src={search} />
 			<input
 				bind:value={searchTerm}
-				type="text"
-				placeholder="Search"
 				class="w-full text-gray-200 placeholder-gray-200 bg-transparent focus:outline-none"
+				placeholder="Search"
+				type="text"
 			/>
 		</div>
 		<div class="flex flex-col items-start justify-start gap-4 lg:flex-row lg:items-center">
@@ -71,7 +71,7 @@
 			</DropdownMenu.Root>
 			<div
 				class="flex items-center gap-2 p-3 border border-white/30 rounded-xl explore-saga-btn">
-				<img class="w-6 h-6" src={add} alt="Load" />
+				<img alt="Load" class="w-6 h-6" src={add} />
 				<button class="text-sm text-white sm:text-md ">Submit your project</button>
 			</div>
 		</div>
@@ -82,20 +82,25 @@
 				class="flex flex-col lg:flex-row gap-4 border border-gray-400/40 rounded-lg p-4 bg-[rgb(2,10,35)] cursor-pointer"
 				aria-hidden="true" aria-label="View more about this project">
 				<div
-					class="flex items-center justify-center w-24 h-24 p-4 overflow-hidden border rounded-md bg-gradient-to-b from-blue-200/10 to-transparent border-gray-400/40"	>
+					class="flex items-center justify-center w-24 h-24 p-4 overflow-hidden border rounded-md bg-gradient-to-b from-blue-200/10 to-transparent border-gray-400/40">
 					<img class="w-auto h-16" src={choice.logo} alt="Project Logo" />
 				</div>
 				<div class="flex flex-col gap-2">
 					<a href={`/projects/${choice.slug}`} class="text-lg text-white md:text-xl">{choice.name}</a>
-<!--					<h3 class="text-sm text-gray-300">{choice.description}</h3>-->
+					<!--					<h3 class="text-sm text-gray-300">{choice.description}</h3>-->
 					<div class="description-container">
-						<h3 class="overflow-hidden text-base text-gray-200 sm:w-80 md:w-72 xl:w-96" style="max-height: {!expandedStates[choice.slug] ? '24' : '9999'}px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: {!expandedStates[choice.slug] ? '2' : 'unset'}; -webkit-box-orient: vertical;">
+						<h3 class="overflow-hidden text-base text-gray-200 sm:w-80 md:w-72 xl:w-96"
+								style="max-height: {!expandedStates[choice.slug] ? '24' : '9999'}px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: {!expandedStates[choice.slug] ? '2' : 'unset'}; -webkit-box-orient: vertical;">
 							{choice.tagline}
 						</h3>
 						{#if !expandedStates[choice.slug]}
-							<button on:click={() => toggleDescription(choice.slug)} class="mt-2 text-sm text-blue-400 hover:underline">Show More</button>
+							<button on:click={() => toggleDescription(choice.slug)}
+											class="mt-2 text-sm text-blue-400 hover:underline">Show More
+							</button>
 						{:else}
-							<button on:click={() => toggleDescription(choice.slug)} class="mt-2 text-sm text-blue-400 hover:underline">Show Less</button>
+							<button on:click={() => toggleDescription(choice.slug)}
+											class="mt-2 text-sm text-blue-400 hover:underline">Show Less
+							</button>
 						{/if}
 					</div>
 					<div class="flex flex-row gap-2">

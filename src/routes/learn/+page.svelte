@@ -59,22 +59,23 @@
 	<div class="text-center">
 		<h1 class="text-4xl font-medium leading-tight mt-4">Resources</h1>
 		<h4 class="mt-6 text-lg font-normal leading-relaxed text-gray-300 px-2">
-			Dive into our comprehensive collection of resources, tailored to support your development journey at every stage.		</h4>
+			Dive into our comprehensive collection of resources, tailored to support your development journey at every
+			stage. </h4>
 	</div>
 	<div class="flex flex-col px-4 gap-8 w-full md:flex-row md:justify-between">
 		<button
+			class="flex flex-row gap-4 items-center border border-white/30 rounded-2xl shadow-lg p-3 w-full md:w-1/2"
 			data-sveltekit-keepfocus
 			on:click={() => inputElement.focus()}
-			class="flex flex-row gap-4 items-center border border-white/30 rounded-2xl shadow-lg p-3 w-full md:w-1/2"
 		>
-			<img class="w-6 h-6" src={search} alt="Welcome" />
+			<img alt="Welcome" class="w-6 h-6" src={search} />
 			<input
-				id="search"
 				bind:this={inputElement}
 				bind:value={$searchTerm}
-				type="text"
-				placeholder="Search"
 				class="bg-transparent w-full text-gray-200 placeholder-gray-200 focus:outline-none"
+				id="search"
+				placeholder="Search"
+				type="text"
 			/>
 		</button>
 		<div class="flex flex-col justify-start items-start lg:flex-row gap-4 lg:items-center">
@@ -103,25 +104,31 @@
 				</DropdownMenu.Content>
 			</DropdownMenu.Root>
 			<div class="flex items-center gap-2 border border-white/30 rounded-xl p-3 explore-saga-btn">
-				<img class="w-6 h-6" src={add} alt="Load" />
+				<img alt="Load" class="w-6 h-6" src={add} />
 				<button class="text-white text-sm sm:text-md">Submit a Resource</button>
 			</div>
 		</div>
 	</div>
 	<div class="grid grid-cols-1 gap-8 px-4 sm:grid-cols-2 lg:grid-cols-3">
 		{#each filteredResources as { title, description, tags, image }}
-			<div class="flex flex-col border border-white/30 rounded-xl overflow-hidden backdrop-blur-lg bg-gradient-to-b from-gray-400/10 to-transparent/20">
+			<div
+				class="flex flex-col border border-white/30 rounded-xl overflow-hidden backdrop-blur-lg bg-gradient-to-b from-gray-400/10 to-transparent/20">
 				<img class="w-full h-56 object-fit" src={image} alt={title} />
 				<div class="flex flex-col w-full p-6 gap-2">
 					<h2 class="text-xl font-medium">{title}</h2>
 					<div class="description-container">
-						<h3 class="text-gray-200" style="max-height: {!expandedStates[title] ? '3' : '9999'}em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: {!expandedStates[title] ? '2' : 'unset'}; -webkit-box-orient: vertical;">
+						<h3 class="text-gray-200"
+								style="max-height: {!expandedStates[title] ? '3' : '9999'}em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: {!expandedStates[title] ? '2' : 'unset'}; -webkit-box-orient: vertical;">
 							{description}
 						</h3>
 						{#if !expandedStates[title]}
-							<button on:click={() => toggleDescription(title)} class="text-blue-400 hover:underline text-sm mt-2">Show More</button>
+							<button on:click={() => toggleDescription(title)} class="text-blue-400 hover:underline text-sm mt-2">Show
+								More
+							</button>
 						{:else}
-							<button on:click={() => toggleDescription(title)} class="text-blue-400 hover:underline text-sm mt-2">Show Less</button>
+							<button on:click={() => toggleDescription(title)} class="text-blue-400 hover:underline text-sm mt-2">Show
+								Less
+							</button>
 						{/if}
 					</div>
 					<div class="flex lg:flex-row flex-col gap-4 mt-4 justify-between items-start">

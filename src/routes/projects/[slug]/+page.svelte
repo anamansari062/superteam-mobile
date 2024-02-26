@@ -7,6 +7,7 @@
 	import x_logo from '$lib/images/x_logo.svg';
 	import discord_logo from '$lib/images/discord_logo.svg';
 	import github_logo from '$lib/images/github_logo.svg';
+
 	export let data;
 </script>
 
@@ -21,7 +22,8 @@
 			<div class="flex flex-col lg:flex-row items-start gap-8">
 				<img
 					alt="Project Logo"
-					class="w-24 h-24 lg:w-28 lg:h-28 rounded-lg bg-gradient-to-b from-blue-400/10 to-transparent p-3 border border-slate-600" src={data.logo} />
+					class="w-24 h-24 lg:w-28 lg:h-28 rounded-lg bg-gradient-to-b from-blue-400/10 to-transparent p-3 border border-slate-600"
+					src={data.logo} />
 
 				<div class="">
 					<h2 class="text-3xl font-bold mb-2">{data.name}</h2>
