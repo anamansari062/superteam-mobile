@@ -30,7 +30,6 @@
 		}
 	});
 
-
 	$: taggedResources = data.filter((resource) => {
 		if (!$selectedTag || $selectedTag === 'all') return resource;
 		if (resource.tags?.some((t) => t.toLowerCase() === $selectedTag?.toLowerCase()))
@@ -52,14 +51,15 @@
 		});
 		return uniqueTags;
 	}
-
 </script>
 
 <section class="flex flex-col items-center pt-24 pb-24 gap-16 w-full max-w-screen-xl mx-auto">
 	<div class="text-center">
 		<h1 class="text-4xl font-medium leading-tight mt-4">Resources</h1>
 		<h4 class="mt-6 text-lg font-normal leading-relaxed text-gray-300 px-2">
-			Dive into our comprehensive collection of resources, tailored to support your development journey at every stage.		</h4>
+			Dive into our comprehensive collection of resources, tailored to support your development
+			journey at every stage.
+		</h4>
 	</div>
 	<div class="flex flex-col px-4 gap-8 w-full md:flex-row md:justify-between">
 		<button
@@ -104,24 +104,43 @@
 			</DropdownMenu.Root>
 			<div class="flex items-center gap-2 border border-white/30 rounded-xl p-3 explore-saga-btn">
 				<img class="w-6 h-6" src={add} alt="Load" />
-				<button class="text-white text-sm sm:text-md">Submit a Resource</button>
+				<a href="https://github.com/anamansari062/superteam-mobile/blob/main/README.md">
+					<button class="text-white text-sm sm:text-md">Submit a Resource</button>
+				</a>
 			</div>
 		</div>
 	</div>
 	<div class="grid grid-cols-1 gap-8 px-4 sm:grid-cols-2 lg:grid-cols-3">
 		{#each filteredResources as { title, description, tags, image }}
-			<div class="flex flex-col border border-white/30 rounded-xl overflow-hidden backdrop-blur-lg bg-gradient-to-b from-gray-400/10 to-transparent/20">
+			<div
+				class="flex flex-col border border-white/30 rounded-xl overflow-hidden backdrop-blur-lg bg-gradient-to-b from-gray-400/10 to-transparent/20"
+			>
 				<img class="w-full h-56 object-fit" src={image} alt={title} />
 				<div class="flex flex-col w-full p-6 gap-2">
 					<h2 class="text-xl font-medium">{title}</h2>
 					<div class="description-container">
-						<h3 class="text-gray-200" style="max-height: {!expandedStates[title] ? '3' : '9999'}em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: {!expandedStates[title] ? '2' : 'unset'}; -webkit-box-orient: vertical;">
+						<h3
+							class="text-gray-200"
+							style="max-height: {!expandedStates[title]
+								? '3'
+								: '9999'}em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: {!expandedStates[
+								title
+							]
+								? '2'
+								: 'unset'}; -webkit-box-orient: vertical;"
+						>
 							{description}
 						</h3>
 						{#if !expandedStates[title]}
-							<button on:click={() => toggleDescription(title)} class="text-blue-400 hover:underline text-sm mt-2">Show More</button>
+							<button
+								on:click={() => toggleDescription(title)}
+								class="text-blue-400 hover:underline text-sm mt-2">Show More</button
+							>
 						{:else}
-							<button on:click={() => toggleDescription(title)} class="text-blue-400 hover:underline text-sm mt-2">Show Less</button>
+							<button
+								on:click={() => toggleDescription(title)}
+								class="text-blue-400 hover:underline text-sm mt-2">Show Less</button
+							>
 						{/if}
 					</div>
 					<div class="flex lg:flex-row flex-col gap-4 mt-4 justify-between items-start">
