@@ -78,7 +78,7 @@
 					<button
 						class="xl:ml-44 lg:mr-16 lg:ml-52 flex items-center gap-2 rounded-xl px-4 py-2 radial-gradient-blue border border-blue-50/20 transition duration-300">
 						View
-						<img alt="View" class="w-4 h-4 xl:mx-2 lg:mr-5 xl:mr-3 2xl:mr-0" src={external_link} />
+						<img alt="View" class="w-4 h-4 xl:mx-2 lg:mr-5 xl:mr-3" src={external_link} />
 					</button>
 				</a>
 			</div>
