@@ -72,6 +72,36 @@
 								<img alt="Telegram" class="h-6" src={telegram_logo} />
 							</a>
 						{/if}
+
+						{#if data.socials.instagram}
+							<a href={data.socials.instagram} rel="noopener noreferrer" target="_blank">
+								<img alt="Instagram" class="h-6" src={instagram_logo} />
+							</a>
+						{/if}
+
+						{#if data.socials.youtube}
+							<a href={data.socials.youtube} rel="noopener noreferrer" target="_blank">
+								<img alt="Youtube" class="h-6" src={youtube_logo} />
+							</a>
+						{/if}
+
+						{#if data.socials.linkedin}
+							<a href={data.socials.linkedin} rel="noopener noreferrer" target="_blank">
+								<img alt="Linkedin" class="h-6" src={linkedin_logo} />
+							</a>
+						{/if}
+
+						{#if data.socials.appstore}
+							<a href={data.socials.appstore} rel="noopener noreferrer" target="_blank">
+								<img alt="Appstore" class="h-6" src={appstore_logo} />
+							</a>
+						{/if}
+
+						{#if data.socials.playstore}
+							<a href={data.socials.playstore} rel="noopener noreferrer" target="_blank">
+								<img alt="Playstore" class="h-6" src={playstore_logo} />
+							</a>
+						{/if}
 					</div>
 				</div>
 				<a href={data.view} rel="noopener noreferrer" target="_blank">
