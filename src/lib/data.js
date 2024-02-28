@@ -30,7 +30,7 @@ const projects = [{
         "name": "Proto",
         slug: "proto",
         "tagline": "Maps are content; We’re building their future",
-        "tags": [""],
+        "tags": [],
         "logo": "https://www.proto-geo.xyz/assets/logo.png",
         "view": "https://www.proto-geo.xyz/",
         "about": "Our app lets you earn for the data you contribute & lets you build a stream of content with long term potential. All maps are content, and you can make them everyday when you walk out of your house and hail a cab, get a coffee or walk your dog. And every time you make them on Proto, you earn, you build content and you create your own moat. Proto helps you catalog, share and monetize these everyday actions, places and trips that make up your life.",
@@ -76,7 +76,7 @@ const projects = [{
         "tags": ["MEDIA & ENTERTAINMENT"],
         "logo": "https://pbs.twimg.com/profile_images/1646925997369876515/jM0ddaIC_400x400.png",
         "view": "https://dreader.io/links",
-        "about": "",
+        "about": "dReader is a platform for discovering, reading, trading and collecting digital comics. It is a decentralized platform that allows creators to publish their work and readers to discover and read comics. dReader is built on Solana and is the first dApp on the SAGA dApp Store.",
         "socials": {
             "x": "https://twitter.com/dReaderApp",
             "discord": "https://discord.com/invite/rrZsRvC9mh",
@@ -117,7 +117,7 @@ const projects = [{
         "tags": ["NFTs"],
         "logo": "https://pbs.twimg.com/profile_images/1561076970812735489/GHo_Pqg9_400x400.jpg",
         "view": "https://tiexo.com/",
-        "about": "Multichain NFT marketplace and data indexer, trade listings and explore blockchain analytics with confidence",
+        "about": "TIEXO is a multichain NFT marketplace that allows users to explore, trade, and check blockchain stats effortlessly. Our platform is designed to be user-friendly and accessible to everyone. We are committed to providing the best experience for our users.",
         "socials": {
             "x": "https://twitter.com/tiexohq",
             "discord": "https://discord.com/invite/tiexohq",
