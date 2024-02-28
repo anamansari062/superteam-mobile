@@ -113,7 +113,7 @@
 				</a>
 			</div>
 			{#if data.about}
-				<div class="mt-4 md:mt-16 max-w-screen-2xl">
+				<div class="mt-8 md:mt-16 max-w-screen-2xl">
 					<h2 class="text-2xl font-bold mb-2">About {data.name}</h2>
 					<p class="text-gray-400 xl:pr-24 w-full lg:text-justify">
 						{data.about}
