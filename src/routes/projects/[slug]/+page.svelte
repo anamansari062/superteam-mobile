@@ -31,7 +31,7 @@
 
 
 				<div>
-					<h2 class="text-2xl xl:text-3xl font-semibold mb-2">{data.name}</h2>
+					<h2 class="text-2xl xl:text-3xl xl:w-80 font-semibold mb-2">{data.name}</h2>
 					<p class="text-gray-400 mb-4 overflow-hidden">
 						{data.tagline}
 					</p>
@@ -106,7 +106,7 @@
 				</div>
 				<a href={data.view} rel="noopener noreferrer" target="_blank">
 					<button
-						class="xl:ml-44 lg:mr-16 lg:ml-52 flex items-center gap-2 rounded-xl px-4 py-2 radial-gradient-blue border border-blue-50/20 transition duration-300">
+						class="xl:ml-44 2xl:ml-96 lg:mr-16 flex items-center gap-2 rounded-xl px-4 py-2 radial-gradient-blue border border-blue-50/20 transition duration-300">
 						View
 						<img alt="View" class="w-4 h-4 xl:mx-2 lg:mr-5 xl:mr-3" src={external_link} />
 					</button>
@@ -115,7 +115,7 @@
 			{#if data.about}
 				<div class="mt-4 md:mt-16 max-w-screen-2xl">
 					<h2 class="text-2xl font-bold mb-2">About {data.name}</h2>
-					<p class="text-gray-400 md:pr-24 lg:text-justify">
+					<p class="text-gray-400 xl:pr-24 w-full lg:text-justify">
 						{data.about}
 					</p>
 				</div>
