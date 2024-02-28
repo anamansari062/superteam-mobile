@@ -1,38 +1,44 @@
-# create-svelte
+# Superteam Mobile
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Welcome to the All Things Mobile Project Repository! This repository serves as a central hub for curating resources and showcasing projects related to mobile development within the Solana ecosystem. Whether you're a developer looking to share your latest creation or someone seeking inspiration and guidance, this Readme will guide you through the process of submitting your resource or project.
 
-## Creating a project
+## Submitting a Resource or Project
 
-If you're seeing this, you've probably already done this step. Congrats!
+You have two options for submitting a resource or project: via Pull Request (PR) or by filling out a form.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+### Option 1: Submitting via Pull Request (PR)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+To submit a resource or project via Pull Request, follow these steps:
 
-## Developing
+1. **Fork the Repository**: Click on the "Fork" button at the top right corner of this repository's page to create a copy of the repository in your GitHub account.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+2. **Clone the Repository**: Clone your forked repository to your local machine using the following command:
+   ```
+   git clone https://github.com/anamansari062/superteam-mobile.git
+   ```
 
-```bash
-npm run dev
+3. **Navigate to the Project Directory**: Move into the directory of the cloned repository:
+   ```
+   cd superteam-mobile
+   ```
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+4. **Add Your Resource or Project**: Inside the repository, locate the appropriate JSON file (`/Users/anamansari/superteam-mobile/src/routes/learn/data.json` for resources, `/superteam-mobile/src/lib/data.js` for projects) and append your resource or project details following the existing format.
 
-## Building
+5. **Commit and Push Your Changes**: Once you have added your resource or project details, commit your changes and push them to your forked repository:
+   ```
+   git add .
+   git commit -m "chore: added my resource/project"
+   git push origin main
+   ```
 
-To create a production version of your app:
+6. **Create a Pull Request**: Go to your forked repository on GitHub and click on the "New Pull Request" button. Compare the changes between your fork and the original repository, then submit the Pull Request.
 
-```bash
-npm run build
-```
+### Option 2: Submitting via Form
 
-You can preview the production build with `npm run preview`.
+If you prefer not to use Git or GitHub, you can fill out the submission form [here](), fill in the required details, and submit the form. Our team will review your submission and add it to the repository accordingly.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Review Process
+
+Once you have submitted your resource or project, our team will review it to ensure it meets our guidelines and quality standards. We aim to process submissions promptly, but please allow some time for review and processing.
+
+Thank you for contributing to the Superteam Mobile! Your submissions play a vital role in enriching our repository and inspiring fellow developers in the Solana ecosystem.
