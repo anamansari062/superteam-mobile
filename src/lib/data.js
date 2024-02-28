@@ -9,7 +9,7 @@ const projects = [{
         "socials": {
             "x": "https://twitter.com/Saganize",
             "discord": "https://discord.gg/awPzjN7NVG",
-            "github": "https://github.com/Saganize/"
+            "github": "https://github.com/Saganize/",
         }
     },
     {

@@ -6,11 +6,16 @@
 	import discord_logo from '$lib/images/discord_logo.svg';
 	import github_logo from '$lib/images/github_logo.svg';
 	import telegram_logo from '$lib/images/telegram_logo.svg';
+	import instagram_logo from '$lib/images/instagram_logo.svg';
+	import linkedin_logo from '$lib/images/linkedin_logo.svg';
+	import youtube_logo from '$lib/images/youtube_logo.svg';
+	import appstore_logo from '$lib/images/appstore_logo.svg';
+	import playstore_logo from '$lib/images/playstore_logo.svg';
 
 	export let data;
 </script>
 
-<section class="text-white px-8 md:p-16 md:px-36 rounded-lg xl:pb-32 min-h-screen">
+<section class="text-white px-8 md:p-16 mb-36 xl:mb-0 md:px-36 rounded-lg xl:pb-32">
 	<div class="flex flex-row">
 		<div class="max-w-screen-2xl">
 			<a class="flex items-center mb-4 cursor-pointer" href={'/projects'}>
@@ -25,8 +30,8 @@
 				</div>
 
 
-				<div class="">
-					<h2 class="text-3xl font-bold mb-2">{data.name}</h2>
+				<div>
+					<h2 class="text-2xl xl:text-3xl font-semibold mb-2">{data.name}</h2>
 					<p class="text-gray-400 mb-4 overflow-hidden">
 						{data.tagline}
 					</p>
@@ -71,14 +76,14 @@
 				</div>
 				<a href={data.view} rel="noopener noreferrer" target="_blank">
 					<button
-						class="xl:ml-36 lg:mr-24 flex items-center gap-2  rounded-xl px-4 py-2 radial-gradient-blue border border-blue-50/20 transition duration-300">
+						class="xl:ml-44 lg:mr-16 lg:ml-52 flex items-center gap-2 rounded-xl px-4 py-2 radial-gradient-blue border border-blue-50/20 transition duration-300">
 						View
-						<img alt="View" class="w-4 h-4 xl:mx-2 md:mr-5" src={external_link} />
+						<img alt="View" class="w-4 h-4 xl:mx-2 lg:mr-5 xl:mr-3 2xl:mr-0" src={external_link} />
 					</button>
 				</a>
 			</div>
 			{#if data.about}
-				<div class="mt-16 max-w-screen-2xl">
+				<div class="mt-4 md:mt-16 max-w-screen-2xl">
 					<h2 class="text-2xl font-bold mb-2">About {data.name}</h2>
 					<p class="text-gray-400 md:pr-24 lg:text-justify">
 						{data.about}
@@ -88,27 +93,52 @@
 		</div>
 		<div class="flex w-auto items-start">
 			<img alt="Line" class="hidden xl:block mx-6" src={line_vertical} />
-			<div class="mt-8 hidden lg:block">
+			<div class="mt-8 hidden lg:block lg:w-48">
 				<h2 class="text-xl 2xl:text-2xl font-medium ml-2">Links</h2>
-				<div class="flex flex-row 2xl:mt-6 gap-4 justify-center items-end ml-2">
+				<div class="flex flex-row 2xl:mt-6 gap-4 items-end ml-2">
 					{#if data.socials.x}
 						<a href={data.socials.x} rel="noopener noreferrer" target="_blank">
-							<img alt="X" class="h-16 2xl:h-12 cursor-pointer" src={x_logo} />
+							<img alt="X" class="h-12 w-8 cursor-pointer" src={x_logo} />
 						</a>
 					{/if}
 					{#if data.socials.discord}
 						<a href={data.socials.discord} rel="noopener noreferrer" target="_blank">
-							<img alt="Discord" class="h-16 2xl:h-12 cursor-pointer" src={discord_logo} />
+							<img alt="Discord" class="h-12 w-8 cursor-pointer" src={discord_logo} />
 						</a>
 					{/if}
 					{#if data.socials.github}
 						<a href={data.socials.github} rel="noopener noreferrer" target="_blank">
-							<img alt="Github" class="h-16 2xl:h-12 cursor-pointer" src={github_logo} />
+							<img alt="Github" class="h-12 w-8 cursor-pointer" src={github_logo} />
 						</a>
 					{/if}
 					{#if data.socials.telegram}
 						<a href={data.socials.telegram} rel="noopener noreferrer" target="_blank">
-							<img alt="Telegram" class="h-16 2xl:h-12 cursor-pointer" src={telegram_logo} />
+							<img alt="Telegram" class="h-12 w-8 cursor-pointer" src={telegram_logo} />
+						</a>
+					{/if}
+					{#if data.socials.instagram}
+						<a href={data.socials.instagram} rel="noopener noreferrer" target="_blank">
+							<img alt="Instagram" class="h-12 w-8 cursor-pointer" src={instagram_logo} />
+						</a>
+					{/if}
+					{#if data.socials.youtube}
+						<a href={data.socials.youtube} rel="noopener noreferrer" target="_blank">
+							<img alt="Youtube" class="h-12 w-8 cursor-pointer" src={youtube_logo} />
+						</a>
+					{/if}
+					{#if data.socials.linkedin}
+						<a href={data.socials.linkedin} rel="noopener noreferrer" target="_blank">
+							<img alt="Linkedin" class="h-12 w-8 cursor-pointer" src={linkedin_logo} />
+						</a>
+					{/if}
+					{#if data.socials.appstore}
+						<a href={data.socials.appstore} rel="noopener noreferrer" target="_blank">
+							<img alt="Appstore" class="h-12 w-8 cursor-pointer" src={appstore_logo} />
+						</a>
+					{/if}
+					{#if data.socials.playstore}
+						<a href={data.socials.playstore} rel="noopener noreferrer" target="_blank">
+							<img alt="Playstore" class="h-12 w-8 cursor-pointer" src={playstore_logo} />
 						</a>
 					{/if}
 				</div>
