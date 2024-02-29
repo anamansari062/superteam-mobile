@@ -36,7 +36,7 @@
 						{data.tagline}
 					</p>
 
-					<div class="flex flex-wrap gap-2 md:mb-4">
+					<div class="flex flex-wrap gap-2">
 						{#if data.tags && data.tags.length > 0}
 							<div class="flex flex-row gap-2">
 								{#each data.tags as tag, i}
@@ -106,14 +106,14 @@
 				</div>
 				<a href={data.view} rel="noopener noreferrer" target="_blank">
 					<button
-						class="xl:ml-44 2xl:ml-96 lg:mr-16 flex items-center gap-2 rounded-xl px-4 py-2 radial-gradient-blue border border-blue-50/20 transition duration-300">
+						class="xl:ml-44 2xl:ml-96 -mt-2 lg:mt-0 lg:mr-16 flex items-center gap-2 rounded-xl px-4 py-2 radial-gradient-blue border border-blue-50/20 transition duration-300">
 						View
 						<img alt="View" class="w-4 h-4 xl:mx-2 lg:mr-5 xl:mr-3" src={external_link} />
 					</button>
 				</a>
 			</div>
 			{#if data.about}
-				<div class="mt-8 md:mt-16 max-w-screen-2xl">
+				<div class="mt-8 lg:mt-12 max-w-screen-2xl">
 					<h2 class="text-2xl font-bold mb-2">About {data.name}</h2>
 					<p class="text-gray-400 xl:pr-24 w-full lg:text-justify">
 						{data.about}
@@ -124,8 +124,8 @@
 		<div class="flex w-auto items-start">
 			<img alt="Line" class="hidden xl:block mx-6" src={line_vertical} />
 			<div class="mt-8 hidden lg:block lg:w-48">
-				<h2 class="text-base 2xl:text-2xl font-medium ml-2">Links</h2>
-				<div class="flex flex-row 2xl:mt-4 flex-wrap gap-4 items-end ml-2">
+				<h2 class="text-base xl:text-xl font-medium ml-2">Links</h2>
+				<div class="flex flex-row -mt-2 flex-wrap gap-4 items-end ml-2">
 					{#if data.socials.x}
 						<a href={data.socials.x} rel="noopener noreferrer" target="_blank">
 							<img alt="X" class="h-12 w-8 cursor-pointer" src={x_logo} />
