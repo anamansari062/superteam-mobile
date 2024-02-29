@@ -48,7 +48,7 @@
 							</div>
 						{/if}
 					</div>
-					<div class="flex flex-row gap-4 justify-start items-end mt-4 lg:hidden">
+					<div class="flex flex-row flex-wrap gap-4 justify-start items-end mt-4 lg:hidden">
 						{#if data.socials.x}
 							<a href={data.socials.x} rel="noopener noreferrer" target="_blank">
 								<img alt="X" class="h-6 cursor-pointer" src={x_logo} />
@@ -125,7 +125,7 @@
 			<img alt="Line" class="hidden xl:block mx-6" src={line_vertical} />
 			<div class="mt-8 hidden lg:block lg:w-48">
 				<h2 class="text-base 2xl:text-2xl font-medium ml-2">Links</h2>
-				<div class="flex flex-row 2xl:mt-4 gap-4 items-end ml-2">
+				<div class="flex flex-row 2xl:mt-4 flex-wrap gap-4 items-end ml-2">
 					{#if data.socials.x}
 						<a href={data.socials.x} rel="noopener noreferrer" target="_blank">
 							<img alt="X" class="h-12 w-8 cursor-pointer" src={x_logo} />
