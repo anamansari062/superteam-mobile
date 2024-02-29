@@ -30,7 +30,7 @@ const projects = [{
         "name": "Proto",
         slug: "proto",
         "tagline": "Maps are content; We’re building their future",
-        "tags": [],
+        "tags": ["INFRASTRUCTURE"],
         "logo": "https://pbs.twimg.com/profile_images/1745763623589535744/QHL9MScM_400x400.jpg",
         "view": "https://www.proto-geo.xyz/",
         "about": "Our app lets you earn for the data you contribute & lets you build a stream of content with long term potential. All maps are content, and you can make them everyday when you walk out of your house and hail a cab, get a coffee or walk your dog. And every time you make them on Proto, you earn, you build content and you create your own moat. Proto helps you catalog, share and monetize these everyday actions, places and trips that make up your life.",

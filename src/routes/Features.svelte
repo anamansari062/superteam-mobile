@@ -60,7 +60,7 @@
 			logo: mentor_logo,
 			title: 'Mentor',
 			subtitle: 'Learn by Experience',
-			link: 'https://earn.superteam.fun/mentor/'
+			link: 'https://discord.gg/dk4j95SDwB'
 		}
 	];
 
