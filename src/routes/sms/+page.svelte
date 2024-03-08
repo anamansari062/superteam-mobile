@@ -87,8 +87,7 @@
 								</div>
 							{/each}
 							<a href={choice.view}
-								 class="flex flex-row gap-1 items-center text-blue-400 px-3 border rounded-md radial-gradient-bottom border-white/30"
-								 style={`--gradient-color:${'rgba(110,63,243,0.4)'}`}>
+								 class="flex flex-row gap-1 items-center text-blue-400 px-3">
 								<div class="text-white hover:text-blue-500 text-sm xl:text-md">View</div>
 								<img src={arrow_up_right} alt="View" class="sm:w-4 sm:h-4" />
 							</a>
