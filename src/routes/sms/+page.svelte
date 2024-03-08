@@ -33,7 +33,7 @@
 	<div class="text-center">
 		<h1 class="mt-4 text-4xl font-semibold">SDKs</h1>
 		<h4 class="px-4 mt-6 text-md md:text-lg">
-			Get inspired by a showcase of groundbreaking projects developed by our vibrant community.
+			Your Gateway to a Seamless Development Experience.
 		</h4>
 	</div>
 	<div class="flex flex-col w-full gap-8 px-4 lg:flex-row md:justify-between">
@@ -52,7 +52,7 @@
 			<div class="flex items-center gap-2 p-3 border border-white/30 rounded-xl explore-saga-btn">
 				<img alt="Load" class="w-6 h-6" src={add} />
 				<a href="https://github.com/anamansari062/superteam-mobile/blob/main/README.md">
-					<button class="text-sm text-white sm:text-md">Submit your project</button>
+					<button class="text-sm text-white sm:text-md">Submit a Tooling</button>
 				</a>
 			</div>
 		</div>

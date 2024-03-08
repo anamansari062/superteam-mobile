@@ -2,9 +2,9 @@
 
 Welcome to the All Things Mobile Project Repository! This repository serves as a central hub for curating resources and showcasing projects related to mobile development within the Solana ecosystem. Whether you're a developer looking to share your latest creation or someone seeking inspiration and guidance, this Readme will guide you through the process of submitting your resource or project.
 
-## Submitting a Resource or Project
+## Submitting a Resource/Project/SDK
 
-You have two options for submitting a resource or project: via Pull Request (PR) or by filling out a form.
+You have two options for submitting a resource/project/sdk: via Pull Request (PR) or by filling out a form.
 
 ### Option 1: Submitting via Pull Request (PR)
 
@@ -22,7 +22,7 @@ To submit a resource or project via Pull Request, follow these steps:
    cd superteam-mobile
    ```
 
-4. **Add Your Resource or Project**: Inside the repository, locate the appropriate JSON file (`/Users/anamansari/superteam-mobile/src/routes/learn/data.json` for resources, `/superteam-mobile/src/lib/data.js` for projects) and append your resource or project details following the existing format.
+4. **Add Your Resource or Project**: Inside the repository, locate the appropriate JSON file (`/Users/anamansari/superteam-mobile/src/routes/learn/data.json` for resources, `/superteam-mobile/src/lib/data.js` for projects, `/superteam-mobile/src/lib/sdk.js` for sdks), and append your resource or project details following the existing format.
 
 5. **Commit and Push Your Changes**: Once you have added your resource or project details, commit your changes and push them to your forked repository:
    ```

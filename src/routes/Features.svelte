@@ -26,7 +26,7 @@
 			tag: '',
 			link: 'https://docs.solanamobile.com/getting-started/intro'
 		},
-		{ id: 2, logo: pwa_logo, title: 'Resources', subtitle: 'Change the Sub title', tag: 'All', link: '' },
+		{ id: 2, logo: pwa_logo, title: 'Resources', subtitle: 'Technical mobile content', tag: 'All', link: '' },
 		{
 			id: 4,
 			logo: mentor_logo,
@@ -47,25 +47,26 @@
 		},
 		{
 			id: 2,
+			logo: sdk_logo,
+			title: 'SDKs',
+			subtitle: 'Accelerate Development',
+			link: '/sms'
+		},
+		{
+			id: 3,
 			logo: earn_logo,
 			title: 'Earn',
 			subtitle: 'Earn your first Crypto',
 			link: 'https://earn.superteam.fun/'
 		},
 		{
-			id: 3,
+			id: 4,
 			logo: grant_logo,
 			title: 'Grants',
 			subtitle: 'Get help to Build',
 			link: 'https://earn.superteam.fun/grants/'
 		},
-		{
-			id: 4,
-			logo: sdk_logo,
-			title: 'SDKs',
-			subtitle: 'Accelerate Development',
-			link: '/sms'
-		}
+		
 	];
 
 	const additionalFeaturesBlock1 = [
