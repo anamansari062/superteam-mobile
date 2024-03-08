@@ -27,8 +27,6 @@
 			link: 'https://docs.solanamobile.com/getting-started/intro'
 		},
 		{ id: 2, logo: pwa_logo, title: 'Resources', subtitle: 'Change the Sub title', tag: 'All', link: '' },
-		// { id: 2, logo: pwa_logo, title: 'PWAs', subtitle: 'Progressive Web Apps', tag: 'PWA' },
-		// { id: 3, logo: sdk_logo, title: 'SDKs', subtitle: 'Accelerate Development', tag: 'SDK', link: '' },
 		{
 			id: 4,
 			logo: mentor_logo,
@@ -66,8 +64,7 @@
 			logo: sdk_logo,
 			title: 'SDKs',
 			subtitle: 'Accelerate Development',
-			link: 'https://discord.gg/dk4j95SDwB',
-			tag: 'SDK'
+			link: '/sms'
 		}
 	];
 
@@ -152,8 +149,8 @@
 					<img alt="Right Arrow" class="sm:mt-5 hidden arrow_right xl:block" src={right_arrow} />
 				</div>
 				<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-12">
-					{#each features_block2 as { link, logo, title, subtitle, tag }}
-						<a href={tag ? `learn/?tag=${tag.toLowerCase()}` : link}>
+					{#each features_block2 as { link, logo, title, subtitle }}
+						<a href={link}>
 							<div class="featureCard">
 								<img class="logo" src={logo} alt={title} />
 								<div class="gap-8 md:mt-6 mt-3">

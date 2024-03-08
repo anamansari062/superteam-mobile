@@ -63,18 +63,18 @@
 	</div>
 	<div class="flex flex-col px-4 gap-8 w-full md:flex-row md:justify-between">
 		<button
+			class="flex flex-row gap-4 items-center border border-white/30 rounded-2xl shadow-lg p-3 w-full md:w-1/2"
 			data-sveltekit-keepfocus
 			on:click={() => inputElement.focus()}
-			class="flex flex-row gap-4 items-center border border-white/30 rounded-2xl shadow-lg p-3 w-full md:w-1/2"
 		>
-			<img class="w-6 h-6" src={search} alt="Welcome" />
+			<img alt="Welcome" class="w-6 h-6" src={search} />
 			<input
-				id="search"
 				bind:this={inputElement}
 				bind:value={$searchTerm}
-				type="text"
-				placeholder="Search"
 				class="bg-transparent w-full text-gray-200 placeholder-gray-200 focus:outline-none"
+				id="search"
+				placeholder="Search"
+				type="text"
 			/>
 		</button>
 		<div class="flex flex-col justify-start items-start lg:flex-row gap-4 lg:items-center">
@@ -103,7 +103,7 @@
 				</DropdownMenu.Content>
 			</DropdownMenu.Root>
 			<div class="flex items-center gap-2 border border-white/30 rounded-xl p-3 explore-saga-btn">
-				<img class="w-6 h-6" src={add} alt="Load" />
+				<img alt="Load" class="w-6 h-6" src={add} />
 				<a href="https://github.com/anamansari062/superteam-mobile/blob/main/README.md">
 					<button class="text-white text-sm sm:text-md">Submit a Resource</button>
 				</a>
@@ -111,7 +111,7 @@
 		</div>
 	</div>
 	<div class="grid grid-cols-1 gap-8 px-4 sm:grid-cols-2 lg:grid-cols-3">
-		{#each filteredResources as { title, description, tags, image }}
+		{#each filteredResources as { title, description, tags, image, viewLink }}
 			<div
 				class="flex flex-col border border-white/30 rounded-xl overflow-hidden backdrop-blur-lg bg-gradient-to-b from-gray-400/10 to-transparent/20"
 			>
@@ -134,20 +134,22 @@
 						{#if !expandedStates[title]}
 							<button
 								on:click={() => toggleDescription(title)}
-								class="text-blue-400 hover:underline text-sm mt-2">Show More</button
+								class="text-blue-400 hover:underline text-sm mt-2">Show More
+							</button
 							>
 						{:else}
 							<button
 								on:click={() => toggleDescription(title)}
-								class="text-blue-400 hover:underline text-sm mt-2">Show Less</button
+								class="text-blue-400 hover:underline text-sm mt-2">Show Less
+							</button
 							>
 						{/if}
 					</div>
 					<div class="flex lg:flex-row flex-col gap-4 mt-4 justify-between items-start">
-						<button class="flex flex-row gap-1 items-center text-blue-400">
-							<h6 class="text-white hover:text-blue-500 text-sm xl:text-md">View</h6>
+						<a href={viewLink} class="flex flex-row gap-1 items-center text-blue-400">
+							<div class="text-white hover:text-blue-500 text-sm xl:text-md">View</div>
 							<img src={arrow_up_right} alt="View" class="sm:w-4 sm:h-4" />
-						</button>
+						</a>
 						<div class="flex gap-2 text-center flex-row flex-wrap">
 							{#each tags as tag, i}
 								<div
