@@ -1,25 +1,25 @@
 <script>
 	import { page } from '$app/stores';
 	import logo from '$lib/images/st-logo.svg';
-	import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
+	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
 	import { Menu } from 'lucide-svelte';
 
 	const navItems = [
-		{ name: 'Home', url: "/" },
-		{ name: 'Resources', url: "/learn" },
-		{ name: 'Projects', url: "/projects" },
+		{ name: 'Home', url: '/' },
+		{ name: 'Resources', url: '/learn' },
+		{ name: 'Projects', url: '/projects' }
 		// { name: 'Earn', url: 'https://earn.superteam.fun/' }
 	];
 
-	let path;
+	let path = '';
 
 	$: path = $page.url.pathname;
 </script>
 
 <header class="flex justify-between items-center w-full h-20 px-5 py-1.5 md:px-10 lg:px-20">
 	<div class="flex items-center gap-2">
-		<a href="/" class="self-center">
-			<img src={logo} alt="Superteam" />
+		<a class="self-center" href="/">
+			<img alt="Superteam" src={logo} />
 		</a>
 		<h2 class="">Mobile</h2>
 	</div>
@@ -46,7 +46,9 @@
 
 	<div class="md:hidden">
 		<DropdownMenu.Root>
-			<DropdownMenu.Trigger><Menu /></DropdownMenu.Trigger>
+			<DropdownMenu.Trigger>
+				<Menu />
+			</DropdownMenu.Trigger>
 			<DropdownMenu.Content class="bg-[#010a23]">
 				<DropdownMenu.Group class="bg-[#010a23]">
 					{#each navItems as item}
@@ -63,55 +65,47 @@
 </header>
 
 <style>
-    .dropdown-item {
-        padding-bottom: 2px;
-    }
-
-    .dropdown-item:hover {
-        background-color: #ffffff11;
-    }
-
     .explore-saga-btn {
-        background-image: radial-gradient(ellipse at top, #ffffff33  0%, #ffffff00  70%);
+        background-image: radial-gradient(ellipse at top, #ffffff33 0%, #ffffff00 70%);
         color: #ffffff;
-        border:  1px solid #ffffff33;
-        padding:  8px  16px;
-        border-radius:  8px;
+        border: 1px solid #ffffff33;
+        padding: 8px 16px;
+        border-radius: 8px;
         text-align: center;
-        transition: background-color  0.2s, color  0.2s;
+        transition: background-color 0.2s, color 0.2s;
     }
 
     .explore-saga-btn:hover {
-        background-image: radial-gradient(ellipse at top, #ffffff44  0%, #ffffff11  70%);
+        background-image: radial-gradient(ellipse at top, #ffffff44 0%, #ffffff11 70%);
     }
 
     a {
         position: relative;
-        transition: color  0.3s ease;
+        transition: color 0.3s ease;
         /*padding-bottom: 14px;*/
     }
 
     a::after {
         content: '';
         position: absolute;
-        left:  0;
-        bottom:  0;
-        width:  100%;
-        height:  2px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
         background-color: #ffffff;
-        opacity:  0;
-        transition: opacity  0.3s ease-in, transform  0.3s ease;
+        opacity: 0;
+        transition: opacity 0.3s ease-in, transform 0.3s ease;
         transform: translateY(100%);
         border-radius: 5px;
     }
 
     a.active::after {
-        opacity:  1;
+        opacity: 1;
         transform: translateY(0);
         box-shadow: white 0px 0px 10px 0px;
     }
 
-    .active{
+    .active {
         color: #ffffff;
     }
 

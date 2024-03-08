@@ -1,16 +1,9 @@
 <script lang="ts">
 	import search from '$lib/images/search.svg';
 	import add from '$lib/images/add.svg';
-
-	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
+	import arrow_up_right from '$lib/images/arrow-up-right.svg';
 
 	export let data;
-
-	let expandedStates: Record<string, boolean> = {};
-
-	function toggleDescription(slug: string) {
-		expandedStates[slug] = !expandedStates[slug];
-	}
 
 	let searchTerm = '';
 	let filteredResources = data.items;
@@ -38,7 +31,7 @@
 
 <section class="flex flex-col w-full max-w-6xl gap-16 pt-24 pb-24 mx-auto xl:pb-64">
 	<div class="text-center">
-		<h1 class="mt-4 text-4xl font-semibold">Projects</h1>
+		<h1 class="mt-4 text-4xl font-semibold">SDKs</h1>
 		<h4 class="px-4 mt-6 text-md md:text-lg">
 			Get inspired by a showcase of groundbreaking projects developed by our vibrant community.
 		</h4>
@@ -56,20 +49,6 @@
 			/>
 		</div>
 		<div class="flex flex-col items-start justify-start gap-4 lg:flex-row lg:items-center">
-			<DropdownMenu.Root>
-				<DropdownMenu.Trigger class="px-3 py-2 text-black explore-saga-btn rounded-xl">
-					{selectedTag || 'Select Category'}
-				</DropdownMenu.Trigger>
-				<DropdownMenu.Content class="bg-[#010a23] text-white shadow-lg rounded mt-2">
-					<DropdownMenu.Group>
-						{#each getUniqueTags(data) as tag}
-							<DropdownMenu.Item on:click={() => (selectedTag = tag)}>
-								<span class="block px-4 py-2">{tag}</span>
-							</DropdownMenu.Item>
-						{/each}
-					</DropdownMenu.Group>
-				</DropdownMenu.Content>
-			</DropdownMenu.Root>
 			<div class="flex items-center gap-2 p-3 border border-white/30 rounded-xl explore-saga-btn">
 				<img alt="Load" class="w-6 h-6" src={add} />
 				<a href="https://github.com/anamansari062/superteam-mobile/blob/main/README.md">
@@ -80,7 +59,7 @@
 	</div>
 	<div class="grid w-full grid-cols-1 gap-8 px-4 md:grid-cols-2 sm:px-8">
 		{#each filteredResources as choice}
-			<a href={`/projects/${choice.slug}`}
+			<div
 				class="flex flex-col lg:flex-row gap-4 border border-gray-400/40 rounded-lg p-4 bg-[rgb(2,10,35)] cursor-pointer"
 				aria-hidden="true"
 				aria-label="View more about this project"
@@ -91,14 +70,11 @@
 					<img class="rounded-full" src={choice.logo} alt="Project Logo" />
 				</div>
 				<div class="flex flex-col gap-2">
-					<div class="text-lg text-white font-semibold md:text-xl">
-						{choice.name}
-					</div>
+					{choice.name}
 					<div class="description-container">
 						<h3 class="overflow-hidden text-sm lg:text-base text-gray-200 sm:w-80 md:w-72 xl:w-96">
 							{choice.tagline}
 						</h3>
-
 					</div>
 					{#if choice.tags && choice.tags.length > 0}
 						<div class="flex flex-row gap-2">
@@ -110,10 +86,15 @@
 									<h5 class="text-xs text-white">{tag}</h5>
 								</div>
 							{/each}
+							<a href={choice.view}
+								 class="flex flex-row gap-1 items-center text-blue-400 px-3">
+								<div class="text-white hover:text-blue-500 text-sm xl:text-md">View</div>
+								<img src={arrow_up_right} alt="View" class="sm:w-4 sm:h-4" />
+							</a>
 						</div>
 					{/if}
 				</div>
-			</a>
+			</div>
 		{/each}
 	</div>
 </section>
