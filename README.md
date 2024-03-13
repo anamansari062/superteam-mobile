@@ -39,6 +39,6 @@ If you prefer not to use Git or GitHub, you can fill out the submission form [he
 
 ## Review Process
 
-Once you have submitted your resource or project, our team will review it to ensure it meets our guidelines and quality standards. We aim to process submissions promptly, but please allow some time for review and processing.
+Once you have submitted your resource or project, our team will review it within 3-4 days to ensure it meets our guidelines. We aim to process submissions promptly, but please allow some time for review and processing. Reach out to this [email](mailto:anamansari062@gmail.com), if you don't hear back from us.
 
 Thank you for contributing to the Superteam Mobile! Your submissions play a vital role in enriching our repository and inspiring fellow developers in the Solana ecosystem.
