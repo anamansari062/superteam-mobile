@@ -15,13 +15,13 @@
 				</div>
 			</a>
 			<div class="flex flex-col w-full h-full gap-8 mx-auto">
-				<a href="https://solanamobile.com/hardware" class="smallCard bg-[url('https://s3-alpha-sig.figma.com/img/cf98/1476/5c0322f80ae0fd0f27297a7205450243?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=djcTdAY2T-~TkpXReQMcWIDjNOac0yDZfvCC4mhvk8pP-ptGOMhB8wMz4Kl9d~ExRZWGvHzlElfCpLrYjsLqyLotEwQOPQZRklfxg4839U8CLPkcpREcGW5FL1MaIT7VfWbILCAKU2ROQ8RR5KIeBNk-ZCHvlTgZTcyoSMqc-7Ewz1MBvzmT0LOy85jtsVqyQGveNztTIRDuwdD9X1iKe80IXAfRfcEFpzD-HB2lGWZtvKPecZxZkMg22HhpJvv2xKLzmP2jaXn94X~56y8kDyU9MSbN9Wj9OkwgOK1tTl4WpP5hSbffiu-j~5BG1sY87GT7AQXAYVv1WIAnVudlhg__')] flex flex-col justify-end w-full h-52 sm:h-44 border border-white/20 rounded-xl bg-cover bg-center">
+				<a href="https://solanamobile.com/hardware" class="smallCard bg-[url('./lib/images/toly_img.png')] flex flex-col justify-end w-full h-52 sm:h-44 border border-white/20 rounded-xl bg-cover bg-center">
 					<div class="cardContent p-3 rounded-b-xl bg-black/20 backdrop-blur-sm sm:backdrop-blur-md">
 						<h2 class="text-xl font-semibold">Saga</h2>
 						<h3 class="text-base font-normal leading-6 text-left text-gray-300">Checkout first crypto phone ever</h3>
 					</div>
 				</a>
-				<a href="https://build.superteam.fun/past-hackathon-winners/Mobile" class="smallCard bg-[url('https://s3-alpha-sig.figma.com/img/1f3d/1bda/45bafb411ac302a70f725126c78fc521?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Bl2Gq1AsRVRuTVRcSyXov0HXnxNoU4aEcEp9u2TZb1KVmucJIqk7Clf6ncsb-B7GUH3dsMRqYm5A1NS7a-YDJcF95ekGC27VdYFS3b~JotfBPfpRbTmXDv0jima4C8xdPmIWkQMW6U7mWzBAe0D-zVa8-pznNC42Nd4zye7uPG0LaLthN7d77ZLXKAowTXteVCoiXfCLts4HmEJ3ndw8uOmML4-EPZTU-Vz-fnxWRHkdbKA5Q1gQ79tOzA4TATC1fQ9j9qvauaTeh~sbWNNyIestHBgVuUfkl26kHuuPrsGoWvkrDYyMSR3ZeXyaObKMqcd7zxEv-0q2r2TJlMcajQ__')] flex flex-col justify-end w-full h-52 sm:h-44 border border-white/20 rounded-xl bg-cover bg-center">
+				<a href="https://build.superteam.fun/past-hackathon-winners/Mobile" class="smallCard bg-[url('./lib/images/hackathon.png')] flex flex-col justify-end w-full h-52 sm:h-44 border border-white/20 rounded-xl bg-cover bg-center">
 					<div class="cardContent p-3 rounded-b-xl bg-black/20 backdrop-blur-sm sm:backdrop-blur-md">
 						<h2 class="text-xl font-semibold">Hackathon Winners</h2>
 						<h3 class="text-base font-normal leading-6 text-left text-gray-300">Previous winner mobile projects</h3>

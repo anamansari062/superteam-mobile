@@ -50,7 +50,7 @@
 			logo: sdk_logo,
 			title: 'SDKs',
 			subtitle: 'Accelerate Development',
-			link: '/sms'
+			link: '/sdks'
 		},
 		{
 			id: 3,

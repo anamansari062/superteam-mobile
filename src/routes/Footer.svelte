@@ -22,6 +22,9 @@
 					<li class="relative" aria-current={$page.url.pathname === '/learn' ? 'page' : undefined}>
 						<a href="/learn" class=" font-medium hover:text-white">Resources</a>
 					</li>
+					<li class="relative" aria-current={$page.url.pathname === '/sdks' ? 'page' : undefined}>
+						<a href="/sdks" class=" font-medium hover:text-white">SDKs</a>
+					</li>
 					<li class="relative" aria-current={$page.url.pathname === '/projects' ? 'page' : undefined}>
 						<a href="/projects" class=" font-medium hover:text-white">Projects</a>
 					</li>
