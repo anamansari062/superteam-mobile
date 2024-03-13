@@ -35,7 +35,7 @@ To submit a resource or project via Pull Request, follow these steps:
 
 ### Option 2: Submitting via Form
 
-If you prefer not to use Git or GitHub, you can fill out the submission form [here](), fill in the required details, and submit the form. Our team will review your submission and add it to the repository accordingly.
+If you prefer not to use Git or GitHub, you can fill out the submission form [here](https://forms.gle/TgAJFXotyCJxeKLn9), fill in the required details, and submit the form. Our team will review your submission and add it to the repository accordingly.
 
 ## Review Process
 
