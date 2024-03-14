@@ -3,7 +3,40 @@
 	import '../app.css';
 	import Footer from './Footer.svelte';
 	import home_bg from '$lib/images/home_bg.png';
+	import SvelteSeo from "svelte-seo";
 </script>
+
+<SvelteSeo
+  title="Superteam Mobile"
+  description="find resources, ideas, and projects related to mobile-based Solana development."
+  canonical="https://mobile.superteam.fun"
+  keywords="solana, mobile, saga, superteam"
+  openGraph={{
+    title: "Superteam Mobile",
+    description:
+      "find resources, ideas, and projects related to mobile-based Solana development.",
+    image: "https://drive.google.com/file/d/1OfsGBlC85d-0DRd1YVSRGj7A3Uq7zd5R/view?usp=sharing",
+    url: "https://mobile.superteam.fun",
+    type: "website",
+    images: [
+      {
+        url: "https://drive.google.com/file/d/1OfsGBlC85d-0DRd1YVSRGj7A3Uq7zd5R/view?usp=sharing",
+        width: 2800,
+        height: 1900,
+        alt: "Preview",
+      }
+    ],
+    site_name: "Home",
+  }}
+  twitter={{
+    card: "summary_large_image",
+    site: "@superteam-mobile",
+    title: "Superteam Mobile",
+    description:
+      "find resources, ideas, and projects related to mobile-based Solana development.",
+    image: "https://drive.google.com/file/d/1OfsGBlC85d-0DRd1YVSRGj7A3Uq7zd5R/view?usp=sharing",
+  }}
+/>
 
 <div class="app">
 	<div>

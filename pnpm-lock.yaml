@@ -94,6 +94,9 @@ devDependencies:
   svelte-check:
     specifier: ^3.6.0
     version: 3.6.4(postcss@8.4.35)(svelte@4.2.11)
+  svelte-seo:
+    specifier: ^1.6.0
+    version: 1.6.0(typescript@5.3.3)
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.1
@@ -2350,6 +2353,14 @@ packages:
       rimraf: 2.7.1
     dev: true
 
+  /schema-dts@1.1.2(typescript@5.3.3):
+    resolution: {integrity: sha512-MpNwH0dZJHinVxk9bT8XUdjKTxMYrA5bLtrrGmFA6PTLwlOKnhi67XoRd6/ty+Djt6ZC0slR57qFhZDNMI6DhQ==}
+    peerDependencies:
+      typescript: '>=4.1.0'
+    dependencies:
+      typescript: 5.3.3
+    dev: true
+
   /semver@7.6.0:
     resolution: {integrity: sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==}
     engines: {node: '>=10'}
@@ -2596,6 +2607,14 @@ packages:
   /svelte-routing@2.12.0:
     resolution: {integrity: sha512-6i4Mncy4P2b7gD7+BOT9JzQvrfGfGXqFra8VXYU5//bpn6AzJ0PLEhH1E/KwY2AxleOiS/8Nm37MGuic2kn15A==}
     dev: false
+
+  /svelte-seo@1.6.0(typescript@5.3.3):
+    resolution: {integrity: sha512-xgyJ2evRrgukCIOl4EMNrXyKXAQxJVYchqw9iTG1pv143bQ9vnI/wrrI1ew+fOLVRnU7yuJVdvgKUSD+sZXXtg==}
+    dependencies:
+      schema-dts: 1.1.2(typescript@5.3.3)
+    transitivePeerDependencies:
+      - typescript
+    dev: true
 
   /svelte@4.2.11:
     resolution: {integrity: sha512-YIQk3J4X89wOLhjsqIW8tqY3JHPuBdtdOIkASP2PZeAMcSW9RsIjQzMesCrxOF3gdWYC0mKknlKF7OqmLM+Zqg==}
