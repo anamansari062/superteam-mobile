@@ -15,12 +15,12 @@
     title: "Superteam Mobile",
     description:
       "find resources, ideas, and projects related to mobile-based Solana development.",
-    image: "https://drive.google.com/file/d/1OfsGBlC85d-0DRd1YVSRGj7A3Uq7zd5R/view?usp=sharing",
+    image: "https://github.com/anamansari062/superteam-mobile/blob/main/src/lib/images/preview.jpg",
     url: "https://mobile.superteam.fun",
     type: "website",
     images: [
       {
-        url: "https://drive.google.com/file/d/1OfsGBlC85d-0DRd1YVSRGj7A3Uq7zd5R/view?usp=sharing",
+        url: "https://github.com/anamansari062/superteam-mobile/blob/main/src/lib/images/preview.jpg",
         width: 2800,
         height: 1900,
         alt: "Preview",
@@ -34,7 +34,7 @@
     title: "Superteam Mobile",
     description:
       "find resources, ideas, and projects related to mobile-based Solana development.",
-    image: "https://drive.google.com/file/d/1OfsGBlC85d-0DRd1YVSRGj7A3Uq7zd5R/view?usp=sharing",
+    image: "https://github.com/anamansari062/superteam-mobile/blob/main/src/lib/images/preview.jpg",
   }}
 />
 
